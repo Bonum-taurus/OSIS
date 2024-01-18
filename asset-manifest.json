@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/OSIS/static/css/main.f855e6bc.css",
+    "main.js": "/OSIS/static/js/main.54b0fa13.js",
+    "static/js/787.fc3d1b10.chunk.js": "/OSIS/static/js/787.fc3d1b10.chunk.js",
+    "index.html": "/OSIS/index.html",
+    "main.f855e6bc.css.map": "/OSIS/static/css/main.f855e6bc.css.map",
+    "main.54b0fa13.js.map": "/OSIS/static/js/main.54b0fa13.js.map",
+    "787.fc3d1b10.chunk.js.map": "/OSIS/static/js/787.fc3d1b10.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.54b0fa13.js"
+  ]
+}
