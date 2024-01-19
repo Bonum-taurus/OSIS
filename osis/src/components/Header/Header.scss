@@ -1,0 +1,118 @@
+@import '../../utilities.scss';
+
+.header {
+
+  &__container {
+    @include container;
+
+    padding: 24px $padding-sides;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-box {
+    width: 80px;
+    height: 22px;
+  }
+
+  &__logo-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+  &__menu-list {
+    display: flex;
+  }
+
+  &__menu-item {
+    margin-left: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__menu-link {
+    color: $font-main-color;
+    font-size: 16px;
+    line-height: 250%;
+
+    transition: color .3s;
+
+    &:not(&--button):hover {
+      color: $button-color; 
+    }
+
+    &--active {
+      color: $active-color;
+    }
+  }
+}
+
+.button {
+  width: 170px;
+
+  padding: 6px 16px;
+
+  cursor: pointer;
+
+  background-color: $button-color;
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: justify-content .3s linear;
+
+  position: relative;
+
+  &__name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+
+    position: absolute;
+  }
+
+  &__arrow {
+    opacity: 0;
+    width: 40px;
+    height: 32px;
+
+    background-color: $active-color;
+    border-radius: 100px;
+   
+    background-image: url(../../images/button/arrow-nav.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+  }
+
+  &:hover {
+    justify-content: space-between;
+  }
+
+  &:hover &__name {
+    position: relative;
+  }
+
+  &:hover &__arrow {
+    opacity: 1;
+    transition-duration: .3s;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Kharkiv';
+  src: url('fonts/Kharkiv\ Tone\ 04.10.2020.ttf');
+  font-weight: 400;
+}
+
+$title-font: 'Kharkiv';
+
+$font-main-color: #595d6a;
+$button-color: #0173db;
+$active-color: #152356;
+$footer-color: #def9ff;
+$disabled-color: #d7dae4;
+
+$padding-sides: 40px;
+
+@mixin container {
+  max-width: 1280px;
+  margin: 0 auto;
+}

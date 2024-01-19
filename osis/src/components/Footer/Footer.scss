@@ -1,0 +1,87 @@
+@import '../../utilities.scss';
+
+.footer {
+  background-color: $footer-color;
+
+  &__container {
+    @include container;
+
+    padding: 60px $padding-sides;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 24px;
+  }
+
+  &__address {
+    grid-column: 1 / 4;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    grid-column: 4 / 6;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__social {
+    grid-column: 7 / 9;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__develop {
+    grid-column: 10 / 12;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    line-height: 150%;
+
+    color: $active-color;
+
+    margin-bottom: 8px;
+  }
+
+  &__link {
+    line-height: 150%;
+
+    color: $active-color;
+
+    &--linkedin, 
+    &--facebook {
+      width: 32px;
+      height: 32px;
+
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &--linkedin {
+      background-image: url(../../images/footer/linkedin-icon.svg);
+
+      margin-right: 8px;
+    }
+
+    &--facebook {
+      background-image: url(../../images/footer/facebook-icon.svg);
+    }
+
+    &--linkedin-develop {
+      text-decoration: underline;
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+  }
+}
