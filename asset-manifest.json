@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/OSIS/static/css/main.f855e6bc.css",
-    "main.js": "/OSIS/static/js/main.54b0fa13.js",
-    "static/js/787.fc3d1b10.chunk.js": "/OSIS/static/js/787.fc3d1b10.chunk.js",
+    "main.css": "/OSIS/static/css/main.70824294.css",
+    "main.js": "/OSIS/static/js/main.682e7eb7.js",
+    "static/media/Kharkiv Tone 04.10.2020.ttf": "/OSIS/static/media/Kharkiv Tone 04.10.2020.6606d31e8d8c3e9f194b.ttf",
+    "static/media/OSIS-logo.svg": "/OSIS/static/media/OSIS-logo.5321e000ef8620060e43513628a93d6e.svg",
+    "static/media/linkedin-icon.svg": "/OSIS/static/media/linkedin-icon.2c479b0cdaa6639dd05b.svg",
     "index.html": "/OSIS/index.html",
-    "main.f855e6bc.css.map": "/OSIS/static/css/main.f855e6bc.css.map",
-    "main.54b0fa13.js.map": "/OSIS/static/js/main.54b0fa13.js.map",
-    "787.fc3d1b10.chunk.js.map": "/OSIS/static/js/787.fc3d1b10.chunk.js.map"
+    "static/media/facebook-icon.svg": "/OSIS/static/media/facebook-icon.3f686a96c35cb0c9ac2b.svg",
+    "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b.svg",
+    "main.70824294.css.map": "/OSIS/static/css/main.70824294.css.map",
+    "main.682e7eb7.js.map": "/OSIS/static/js/main.682e7eb7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.54b0fa13.js"
+    "static/css/main.70824294.css",
+    "static/js/main.682e7eb7.js"
   ]
 }
