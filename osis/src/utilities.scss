@@ -18,3 +18,27 @@ $padding-sides: 40px;
   max-width: 1280px;
   margin: 0 auto;
 }
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+}
+
+@mixin subtitle {
+  font-family: $title-font;
+  font-size: 90px;
+  line-height: 110%
+}
+
+@mixin text {
+  color: $font-main-color;
+  line-height: 150%;
+  font-size: 17px;
+}
+
+@mixin name {
+  color: $font-main-color;
+  line-height: 150%;
+  text-transform: uppercase;
+}

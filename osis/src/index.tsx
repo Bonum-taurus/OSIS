@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 import './index.scss';
 import { Root } from './Root';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+	document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <Router>
-    <React.StrictMode>
-      <Root />
-    </React.StrictMode>
-  </Router>
+  <ParallaxProvider>
+    <Router>
+      <React.StrictMode>
+        <Root /> 
+      </React.StrictMode>
+    </Router>
+  </ParallaxProvider>
 );

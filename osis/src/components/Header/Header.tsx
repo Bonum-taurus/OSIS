@@ -11,8 +11,6 @@ export const Header = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  window.console.log(pathname)
-
   return (
     <header className="header">
       <div className="header__container">

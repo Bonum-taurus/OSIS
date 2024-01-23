@@ -1,6 +1,10 @@
 @import '../../utilities.scss';
 
 .header {
+  width: 99%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 
   &__container {
     @include container;
@@ -21,7 +25,7 @@
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
   }
 
   &__menu-list {
@@ -72,10 +76,12 @@
   position: relative;
 
   &__name {
+    align-self: start;
+
     color: #fff;
     font-size: 16px;
     font-weight: 600;
-    line-height: 150%;
+    line-height: 200%;
 
     position: absolute;
   }

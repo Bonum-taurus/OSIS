@@ -1,0 +1,97 @@
+@import '../../utilities.scss';
+
+$logos: 
+  1 url(../../images/slider/logos/renault.svg) url(../../images/slider/logos-hover/renault.svg),
+ 
+  2 url(../../images/slider/logos/nokia.svg) url(../../images/slider/logos-hover/nokia.svg),
+
+  3 url(../../images/slider/logos/ebay.svg) url(../../images/slider/logos-hover/ebay.svg),
+
+  4 url(../../images/slider/logos/obriy.svg) url(../../images/slider/logos-hover/obriy.svg),
+
+  5 url(../../images/slider/logos/lanet.svg) url(../../images/slider/logos-hover/lanet.svg),
+
+  6 url(../../images/slider/logos/MacPaw.svg) url(../../images/slider/logos-hover/MacPaw.svg),
+
+  7 url(../../images/slider/logos/bank_for_investments_and_savings.svg) url(../../images/slider/logos-hover/bank_for_investments_and_savings.svg),
+
+  8 url(../../images/slider/logos/porsche.svg) url(../../images/slider/logos-hover/porsche.svg),
+
+  9 url(../../images/slider/logos/lime.svg) url(../../images/slider/logos-hover/lime.svg),
+
+  10 url(../../images/slider/logos/Raiffeisen_Bank.svg) url(../../images/slider/logos-hover/Raiffeisen_Bank.svg),
+
+  11 url(../../images/slider/logos/STB.svg) url(../../images/slider/logos-hover/STB.svg),
+
+  12 url(../../images/slider/logos/kernel.svg) url(../../images/slider/logos-hover/kernel.svg),
+
+  13 url(../../images/slider/logos/apteka.svg) url(../../images/slider/logos-hover/apteka.svg),
+
+  14 url(../../images/slider/logos/praveks.svg) url(../../images/slider/logos-hover/praveks.svg),
+
+  15 url(../../images/slider/logos/Credit_Europe_Bank.svg) url(../../images/slider/logos-hover/Credit_Europe_Bank.svg),
+
+  16 url(../../images/slider/logos/finansy-ta-kredyt.svg) url(../../images/slider/logos-hover/finansy-ta-kredyt.svg),
+
+  17 url(../../images/slider/logos/vishpha.svg) url(../../images/slider/logos-hover/vishpha.svg),
+
+  18 url(../../images/slider/logos/PPC.svg) url(../../images/slider/logos-hover/PPC.svg),
+
+  19 url(../../images/slider/logos/farmak.svg) url(../../images/slider/logos-hover/farmak.svg),
+
+  20 url(../../images/slider/logos/upc.svg) url(../../images/slider/logos-hover/upc.svg),
+
+  21 url(../../images/slider/logos/magisters.svg) url(../../images/slider/logos-hover/magisters.svg),
+
+  22 url(../../images/slider/logos/magento_enterprise.svg) url(../../images/slider/logos-hover/magento_enterprise.svg),
+
+  23 url(../../images/slider/logos/credit-agricole.svg) url(../../images/slider/logos-hover/credit-agricole.svg),
+
+  24 url(../../images/slider/logos/madek.svg) url(../../images/slider/logos-hover/madek.svg),
+
+  25 url(../../images/slider/logos/samsung.svg) url(../../images/slider/logos-hover/samsung.svg),
+
+  26 url(../../images/slider/logos/Ukrgasbank.svg) url(../../images/slider/logos-hover/Ukrgasbank.svg),
+
+  27 url(../../images/slider/logos/persha-gruzova-kompania.svg) url(../../images/slider/logos-hover/persha-gruzova-kompania.svg),
+
+  28 url(../../images/slider/logos/kosmo.svg) url(../../images/slider/logos-hover/kosmo.svg),
+
+  29 url(../../images/slider/logos/socar.svg) url(../../images/slider/logos-hover/socar.svg),
+
+  30 url(../../images/slider/logos/BNC.svg) url(../../images/slider/logos-hover/BNC.svg),
+
+  31 url(../../images/slider/logos/baiadera.svg) url(../../images/slider/logos-hover/baiadera.svg);
+
+.logo {
+  border: 1px solid $disabled-color;
+  border-radius: 16px;
+
+  width: 282px;
+  height: 180px;
+  padding: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__brand {
+    width: 100%;
+    height: 100%;
+
+    transition: background .3s ease;
+
+    @each $num, $logo, $hover in $logos {
+      &--#{$num} {
+        background-image: $logo;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        .logo:hover & {
+          background-image: $hover;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
