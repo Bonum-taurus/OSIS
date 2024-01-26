@@ -1,26 +1,12 @@
 import './Main.scss';
 import title from '../../images/main/main-title.svg';
 import ten from '../../images/main/10+.png';
-import { LogoCard } from '../../components/LogoCard';
 
 import { Parallax } from 'react-scroll-parallax';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import "swiper/css/grid";
-import "swiper/css/pagination";
 import { WaveParallax } from '../../components/WaveParallax';
+import wave from '../../images/parallax/main-wave-parallax.png';
 
-const generateAmountCards = (amount: number) => {
-  const result = [];
-
-  for (let i = 1; i <= amount; i++) {
-    result.push(`${i}`);
-  }
-
-  return result;
-}
+import { Slider } from '../../components/Slider';
 
 export const Main = () => {
   return (
@@ -45,7 +31,7 @@ export const Main = () => {
           translateY={['-100%', '400%']}
           translateX={['-70%', '30%']}
         >
-          <WaveParallax />
+          <WaveParallax wave={wave} />
         </Parallax>
 
         <section className="main__about about">
@@ -128,30 +114,8 @@ export const Main = () => {
         </section>
       </div>
 
-      <section className="main__slider slider">
-        <Swiper
-          className="main__swiper-slider"
-          modules={[Grid, Pagination]}
-          spaceBetween={16}
-          slidesPerView={4}
-          slidesPerGroup={4}
-          speed={2000}
-          pagination={
-           { clickable: true }
-          }
-          grid={
-            {
-              rows: 2,
-              fill: "row",
-            }  
-          }
-        >
-          {generateAmountCards(31).map(number => (
-            <SwiperSlide key={number}>
-              <LogoCard number={number} />
-           </SwiperSlide>
-          ))}
-        </Swiper>
+      <section className="main__slider">
+        <Slider/>
       </section>
     </div>
   )

@@ -1,0 +1,88 @@
+@import '../../utilities.scss';
+
+$triger-margin-bottom: 36px;
+$transition-open: all 0.8s;
+
+.accordion-item {
+  transition: $transition-open;
+
+  &__triger {
+    height: 45px;
+    width: 100%;
+
+    border: none;
+    border-bottom: 1px solid $disabled-color;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: $transition-open;
+
+    margin-bottom: $triger-margin-bottom;
+
+    &--last {
+      margin-bottom: 0;
+    }
+  }
+
+  &__triger-title {
+    color: $active-color;
+    letter-spacing: 1px;
+    font-size: 24px;
+    line-height: 150%;
+  }
+
+  &__triger-arrow {
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../../images/directions/accordion/chevron-down.svg);
+  }
+
+  &__inner-box {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    transition: $transition-open;
+
+    &--open {
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__inner {
+    padding-left: 50px;
+    
+    overflow: hidden;
+  }
+
+  &__inner-point {
+    @include text;
+
+    color: $active-color;
+
+    list-style: disc;
+
+    margin-bottom: 16px;
+  }
+
+  &--active {
+    margin-bottom: 64px;
+  }
+
+  &--active &__triger-arrow {
+    background-image: url(../../images/directions/accordion/chevron-up.svg);
+  }
+
+  &--active &__triger--last {
+    margin-bottom: $triger-margin-bottom;
+  }
+
+  &--active.accordion-item--last {
+    margin-bottom: 0;
+  }
+}

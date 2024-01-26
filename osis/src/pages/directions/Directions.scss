@@ -1,0 +1,77 @@
+@import '../../utilities.scss';
+
+.directions {
+  @include container;
+
+  padding: 128px $padding-sides 0;
+
+  @include grid;
+
+  &__title {
+    @include subtitle;
+
+    grid-column: 2 / 8;
+
+    margin-bottom: 60px;
+
+    &--vendors {
+      grid-row: 3 / 4;
+    }
+  }
+
+  &__parallax-box-left {
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+
+    position: relative;
+  }
+
+  &__parallax-left {
+    position: absolute;
+    top: 0;
+    left: -175%;
+  }
+
+  &__parallax-box-right {
+    grid-column: 7 / 13;
+    grid-row: 3 / 4;
+
+    position: relative;
+    z-index: -10;
+  }
+
+  &__parallax-right {
+    position: absolute;
+    top: -50%;
+
+    z-index: -10;
+  }
+
+  &__accordion {
+    grid-column: 6 / 13; 
+    grid-row: 2 / 3;
+
+    margin-bottom: 100px;
+  }
+
+  &__vendors-text {
+    @include text;
+
+    grid-column: 6 / 13;
+    grid-row: 4 / 5;
+
+    margin-bottom: 40px;
+  }
+
+  &__vendors-logos {
+    grid-column: 1 / 13;
+    grid-row: 5 / 6;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+
+    margin-bottom: 100px;
+  }
+}

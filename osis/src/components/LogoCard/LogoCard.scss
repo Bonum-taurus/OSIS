@@ -64,34 +64,9 @@ $logos:
   31 url(../../images/slider/logos/baiadera.svg) url(../../images/slider/logos-hover/baiadera.svg);
 
 .logo {
-  border: 1px solid $disabled-color;
-  border-radius: 16px;
-
-  width: 282px;
-  height: 180px;
-  padding: 16px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include card;
 
   &__brand {
-    width: 100%;
-    height: 100%;
-
-    transition: background .3s ease;
-
-    @each $num, $logo, $hover in $logos {
-      &--#{$num} {
-        background-image: $logo;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        .logo:hover & {
-          background-image: $hover;
-          transform: scale(1.1);
-        }
-      }
-    }
+    @include cardLoop($logos, logo)
   }
 }

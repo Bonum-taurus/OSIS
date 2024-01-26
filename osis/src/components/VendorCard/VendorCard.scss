@@ -1,0 +1,32 @@
+@import '../../utilities.scss';
+
+$vendors: 
+  1 url(../../images/directions/vendors-logos/cisco.svg) url(../../images/directions/vendors-hover/cisco.svg),
+ 
+  2 url(../../images/directions/vendors-logos/vmware.svg) url(../../images/directions/vendors-hover/vmware.svg),
+
+  3 url(../../images/directions/vendors-logos/aruba.svg) url(../../images/directions/vendors-hover/aruba.svg),
+
+  4 url(../../images/directions/vendors-logos/netapp.svg) url(../../images/directions/vendors-hover/netapp.svg),
+
+  5 url(../../images/directions/vendors-logos/EMC.svg) url(../../images/directions/vendors-hover/EMC.svg),
+
+  6 url(../../images/directions/vendors-logos/dell.svg) url(../../images/directions/vendors-hover/dell.svg),
+
+  7 url(../../images/directions/vendors-logos/solarwinds.svg) url(../../images/directions/vendors-hover/solarwinds.svg),
+
+  8 url(../../images/directions/vendors-logos/citrix.svg) url(../../images/directions/vendors-hover/citrix.svg),
+
+  9 url(../../images/directions/vendors-logos/palo-alto.svg) url(../../images/directions/vendors-hover/palo-alto.svg),
+
+  10 url(../../images/directions/vendors-logos/motorola.svg) url(../../images/directions/vendors-hover/motorola.svg),
+
+  11 url(../../images/directions/vendors-logos/ibm.svg) url(../../images/directions/vendors-hover/ibm.svg);
+
+.vendor {
+  @include card;
+
+  &__logo {
+    @include cardLoop($vendors, vendor)
+  }
+}

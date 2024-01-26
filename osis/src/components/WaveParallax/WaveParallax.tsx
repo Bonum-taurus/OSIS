@@ -1,7 +1,12 @@
-import './WaveParallax.scss';
-import wave from '../../images/parallax/wave-parallax.png';
+import React from 'react';
 
-export const WaveParallax = () => {
+import './WaveParallax.scss';
+
+type Props = {
+  wave: string,
+}
+
+export const WaveParallax: React.FC<Props> = ({ wave }) => {
   return (
     <div className="wave-parallax">
       <img
