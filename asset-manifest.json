@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/OSIS/static/css/main.47a410d7.css",
-    "main.js": "/OSIS/static/js/main.d21f492c.js",
+    "main.css": "/OSIS/static/css/main.1dcc116e.css",
+    "main.js": "/OSIS/static/js/main.d7233ed5.js",
     "static/media/waves-hover.png": "/OSIS/static/media/waves-hover.031a6c396b135a6f7c7b.png",
     "static/media/waves.png": "/OSIS/static/media/waves.69a04e3a7d0211fb3443.png",
-    "static/media/wave-parallax.png": "/OSIS/static/media/wave-parallax.1aa775c4125d0330f7f7.png",
+    "static/media/directions-wave-parallax.png": "/OSIS/static/media/directions-wave-parallax.35978786fa738d2ea9fa.png",
+    "static/media/main-wave-parallax.png": "/OSIS/static/media/main-wave-parallax.1aa775c4125d0330f7f7.png",
     "static/media/finansy-ta-kredyt.svg": "/OSIS/static/media/finansy-ta-kredyt.d8a8ae40ea6eae71842f.svg",
     "static/media/STB.svg": "/OSIS/static/media/STB.a3b34f24e573decb2ff7.svg",
     "static/media/Kharkiv Tone 04.10.2020.ttf": "/OSIS/static/media/Kharkiv Tone 04.10.2020.6606d31e8d8c3e9f194b.ttf",
@@ -19,10 +20,12 @@
     "static/media/magisters.svg": "/OSIS/static/media/magisters.8e139714f426d489877a.svg",
     "static/media/PPC.svg": "/OSIS/static/media/PPC.b69588fd54b25511a935.svg",
     "static/media/apteka.svg": "/OSIS/static/media/apteka.76d70b739d2d23ae03aa.svg",
+    "static/media/palo-alto.svg": "/OSIS/static/media/palo-alto.92c4dc89bb6da92a9743.svg",
     "static/media/madek.svg": "/OSIS/static/media/madek.909a4397792b87743989.svg",
     "static/media/Ukrgasbank.svg": "/OSIS/static/media/Ukrgasbank.09b6264e17b734334e3e.svg",
     "static/media/praveks.svg": "/OSIS/static/media/praveks.a707b59e3f762b79a996.svg",
     "static/media/bank_for_investments_and_savings.svg": "/OSIS/static/media/bank_for_investments_and_savings.bfef9ad49dda3ba24272.svg",
+    "static/media/aruba.svg": "/OSIS/static/media/aruba.9221bf2badedb3a06e35.svg",
     "static/media/persha-gruzova-kompania.svg": "/OSIS/static/media/persha-gruzova-kompania.e5a68895ca63e9d2b81b.svg",
     "static/media/Credit_Europe_Bank.svg": "/OSIS/static/media/Credit_Europe_Bank.54828ece769db01faa1c.svg",
     "static/media/obriy.svg": "/OSIS/static/media/obriy.932674f24fff1a76424b.svg",
@@ -31,12 +34,21 @@
     "static/media/lime.svg": "/OSIS/static/media/lime.09b6a205ce874ef1ac9d.svg",
     "static/media/renault.svg": "/OSIS/static/media/renault.3297e6b5915a12d9a89c.svg",
     "static/media/vishpha.svg": "/OSIS/static/media/vishpha.8db282f81433b9d84a1d.svg",
+    "static/media/cisco.svg": "/OSIS/static/media/cisco.d4886e2c2b943cdde8b2.svg",
     "static/media/OSIS-logo.svg": "/OSIS/static/media/OSIS-logo.5321e000ef8620060e43513628a93d6e.svg",
+    "static/media/vmware.svg": "/OSIS/static/media/vmware.2492d4eb5d4e5d362625.svg",
+    "static/media/solarwinds.svg": "/OSIS/static/media/solarwinds.b4d7d89f0aeb0a4082d3.svg",
     "static/media/Raiffeisen_Bank.svg": "/OSIS/static/media/Raiffeisen_Bank.0a31883b1d59309df085.svg",
     "static/media/kernel.svg": "/OSIS/static/media/kernel.cc31d86f72d410825bb1.svg",
     "static/media/farmak.svg": "/OSIS/static/media/farmak.53def8b5d945c13bcccb.svg",
+    "static/media/motorola.svg": "/OSIS/static/media/motorola.da87c851258eff7cee34.svg",
     "static/media/samsung.svg": "/OSIS/static/media/samsung.181867e052f5a588f6dc.svg",
+    "static/media/citrix.svg": "/OSIS/static/media/citrix.b074746717ea0e39fd22.svg",
     "static/media/socar.svg": "/OSIS/static/media/socar.726ebb5db1d191efb0e0.svg",
+    "static/media/EMC.svg": "/OSIS/static/media/EMC.5ca3d754666d3b2b7db3.svg",
+    "static/media/netapp.svg": "/OSIS/static/media/netapp.3681e4a836d37007921a.svg",
+    "static/media/dell.svg": "/OSIS/static/media/dell.a8d18f28bb4e0717af14.svg",
+    "static/media/ibm.svg": "/OSIS/static/media/ibm.752f50d9ff561980c2d4.svg",
     "static/media/lanet.svg": "/OSIS/static/media/lanet.e075e30162af999b8be7.svg",
     "static/media/ebay.svg": "/OSIS/static/media/ebay.418d833bbe0e26661fd4.svg",
     "static/media/nokia.svg": "/OSIS/static/media/nokia.7a8637f30df0f9aea149.svg",
@@ -44,11 +56,13 @@
     "index.html": "/OSIS/index.html",
     "static/media/facebook-icon.svg": "/OSIS/static/media/facebook-icon.3f686a96c35cb0c9ac2b.svg",
     "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b.svg",
-    "main.47a410d7.css.map": "/OSIS/static/css/main.47a410d7.css.map",
-    "main.d21f492c.js.map": "/OSIS/static/js/main.d21f492c.js.map"
+    "static/media/chevron-down.svg": "/OSIS/static/media/chevron-down.c343d1a39a5b3946309e.svg",
+    "static/media/chevron-up.svg": "/OSIS/static/media/chevron-up.5b19f08e2afb92d90b69.svg",
+    "main.1dcc116e.css.map": "/OSIS/static/css/main.1dcc116e.css.map",
+    "main.d7233ed5.js.map": "/OSIS/static/js/main.d7233ed5.js.map"
   },
   "entrypoints": [
-    "static/css/main.47a410d7.css",
-    "static/js/main.d21f492c.js"
+    "static/css/main.1dcc116e.css",
+    "static/js/main.d7233ed5.js"
   ]
 }
