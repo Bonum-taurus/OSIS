@@ -21,7 +21,7 @@ export const Directions = () => {
       <div className="directions__parallax-box-left">
         <Parallax 
           className="directions__parallax-left"
-          translateY={['-40%', '60%']}
+          translateY={['-100%', '60%']}
         >
           <WaveParallax wave={wave} />
         </Parallax>
@@ -30,8 +30,7 @@ export const Directions = () => {
       <div className="directions__parallax-box-right">
         <Parallax 
           className="directions__parallax-right"
-          translateX={['80%', '-30%']}
-          translateY={['0', '-20']}
+          translateY={['-20%', '160%', 'easeInOutSine']}
         >
           <WaveParallax wave={wave} />
         </Parallax>
@@ -41,11 +40,11 @@ export const Directions = () => {
         Вендори
       </h2>
       <p className="directions__vendors-text">
-        Ми працюємо з дуже великим спектром обладнання, він включає, але не обмежується наступним 
+        Ми пишаємося нашими міцними партнерськими відносинами з провідними постачальниками IT обладнання. Наші партнери – це ключові гравці в галузі, котрі забезпечують нам доступ до передових технологій та інноваційних рішень.
       </p>
 
       <div className="directions__vendors-logos">
-        {generateAmountCards(11).map(number => (
+        {generateAmountCards(12).map(number => (
           <VendorCard key={number} number={number} />
         ))}
       </div>

@@ -26,7 +26,27 @@ $vendors:
 .vendor {
   @include card;
 
+  &:hover &__logo--12::before {
+    font-size: 30px;
+    color: $button-color;
+    font-family: $title-font;
+  }
+
   &__logo {
-    @include cardLoop($vendors, vendor)
+    @include cardLoop($vendors, vendor);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &--12::before {
+      content: 'Інші';
+      font-family: 'Work Sans';
+      color: #212529;
+      font-size: 24px;
+      line-height: 150%;
+
+      transition: all .4s;
+    }
   }
 }

@@ -8,7 +8,7 @@
   @include grid;
 
   &__title {
-    @include subtitle;
+    @include title();
 
     grid-column: 2 / 8;
 
@@ -21,7 +21,7 @@
 
   &__parallax-box-left {
     grid-column: 1 / 5;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
 
     position: relative;
   }
@@ -30,6 +30,8 @@
     position: absolute;
     top: 0;
     left: -175%;
+
+    z-index: -10;
   }
 
   &__parallax-box-right {
@@ -37,12 +39,12 @@
     grid-row: 3 / 4;
 
     position: relative;
-    z-index: -10;
   }
 
   &__parallax-right {
     position: absolute;
-    top: -50%;
+    top: 0;
+    right: -75%;
 
     z-index: -10;
   }

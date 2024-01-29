@@ -108,14 +108,14 @@
   }
 
   &__title-experience {
-    @include subtitle;
+    @include title();
 
     grid-column: 2 / 7;
     grid-row: 2 / 3;
   }
 
   &__title-quality {
-    @include subtitle;
+    @include title();
 
     grid-column: 2 / 7;
     grid-row: 5 / 6;
@@ -171,7 +171,7 @@
   }
 
   &__success-nine-hundred {
-    @include subtitle;
+    @include title();
 
     text-align: right;
 
@@ -191,7 +191,7 @@
   }
 
   &__fortune-eight {
-    @include subtitle;
+    @include title();
 
     text-align: right;
 
@@ -209,7 +209,7 @@
   }
 
   &__partners-twenty {
-    @include subtitle;
+    @include title();
 
     text-align: right;
   }
@@ -227,7 +227,7 @@
   padding: 0 $padding-sides;
 
   &__title {
-    @include subtitle;
+    @include title();
 
     grid-column: 2 / 7;
 
@@ -235,7 +235,7 @@
   }
 
   &__text {
-    @include text;
+    @include text();
 
     grid-column: 7 / 13;
     grid-row: 2 / 3;

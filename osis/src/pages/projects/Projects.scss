@@ -1,0 +1,84 @@
+@import '../../utilities.scss';
+
+$margin-bottom: 100px;
+
+.projects {
+  @include container;
+
+  padding: 128px $padding-sides 0;
+
+  @include grid;
+
+  &__title {
+    @include title();
+
+    margin-bottom: $margin-bottom;
+
+    grid-column: 2 / 7;
+  }
+
+  &__block {
+    margin-bottom: $margin-bottom;
+
+    grid-column: 7 / 13;
+  }
+
+  &__subtitle {
+    @include title(60px);
+
+    grid-column: 2 / 7;
+
+    &--consultation {
+      grid-column: 2 / 8;
+
+      margin-bottom: 60px;
+    }
+  }
+
+  &__name {
+    color: $active-color;
+    font-size: 32px;
+    line-height: 150%;
+
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    @include text;
+
+    color: $active-color;
+
+    margin-bottom: 32px;
+  }
+
+  &__button-consultation {
+    grid-column: 7 / 13;
+
+    margin-bottom: 60px;
+  }
+
+  &__parallax-box-left {
+    grid-column: 1 / 6;
+
+    position: relative;
+    z-index: -10;
+  }
+
+  &__parallax-left {
+    position: absolute;
+    top: 0;
+    left: -80%;
+  }
+
+  &__parallax-box-right {
+    grid-column: 8 / 13;
+
+    position: relative;
+    z-index: -10;
+  }
+
+  &__parallax-right {
+    position: absolute;
+    right: -125%;
+  }
+}

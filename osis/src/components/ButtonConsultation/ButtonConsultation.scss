@@ -1,0 +1,48 @@
+@import '../../utilities.scss';
+
+.button-consultation {
+  border: none;
+
+  width: 384px;
+  height: 80px;
+
+  padding: 10px 40px;
+
+  cursor: pointer;
+
+  background-color: $button-color;
+  border-radius: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: all .5s;
+
+  &__name {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  &__arrow {
+    background-color: $active-color;
+    border-radius: 100px;
+    padding: 16px 24px;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    transition: all .5s;
+  }
+
+  &:hover &__arrow {
+    padding-left: 100px;
+  }
+
+  &:active {
+    background-color: $active-color;
+  }
+}
