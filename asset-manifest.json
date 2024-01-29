@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/OSIS/static/css/main.1dcc116e.css",
-    "main.js": "/OSIS/static/js/main.d7233ed5.js",
+    "main.css": "/OSIS/static/css/main.40cb3ebe.css",
+    "main.js": "/OSIS/static/js/main.c1fc4465.js",
     "static/media/waves-hover.png": "/OSIS/static/media/waves-hover.031a6c396b135a6f7c7b.png",
     "static/media/waves.png": "/OSIS/static/media/waves.69a04e3a7d0211fb3443.png",
     "static/media/directions-wave-parallax.png": "/OSIS/static/media/directions-wave-parallax.35978786fa738d2ea9fa.png",
     "static/media/main-wave-parallax.png": "/OSIS/static/media/main-wave-parallax.1aa775c4125d0330f7f7.png",
+    "static/media/projects-wave-parallax.png": "/OSIS/static/media/projects-wave-parallax.e61fc1215facf7c9db9d.png",
     "static/media/finansy-ta-kredyt.svg": "/OSIS/static/media/finansy-ta-kredyt.d8a8ae40ea6eae71842f.svg",
     "static/media/STB.svg": "/OSIS/static/media/STB.a3b34f24e573decb2ff7.svg",
     "static/media/Kharkiv Tone 04.10.2020.ttf": "/OSIS/static/media/Kharkiv Tone 04.10.2020.6606d31e8d8c3e9f194b.ttf",
@@ -55,14 +56,14 @@
     "static/media/linkedin-icon.svg": "/OSIS/static/media/linkedin-icon.2c479b0cdaa6639dd05b.svg",
     "index.html": "/OSIS/index.html",
     "static/media/facebook-icon.svg": "/OSIS/static/media/facebook-icon.3f686a96c35cb0c9ac2b.svg",
-    "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b.svg",
+    "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b5974efaefa9b.svg",
     "static/media/chevron-down.svg": "/OSIS/static/media/chevron-down.c343d1a39a5b3946309e.svg",
     "static/media/chevron-up.svg": "/OSIS/static/media/chevron-up.5b19f08e2afb92d90b69.svg",
-    "main.1dcc116e.css.map": "/OSIS/static/css/main.1dcc116e.css.map",
-    "main.d7233ed5.js.map": "/OSIS/static/js/main.d7233ed5.js.map"
+    "main.40cb3ebe.css.map": "/OSIS/static/css/main.40cb3ebe.css.map",
+    "main.c1fc4465.js.map": "/OSIS/static/js/main.c1fc4465.js.map"
   },
   "entrypoints": [
-    "static/css/main.1dcc116e.css",
-    "static/js/main.d7233ed5.js"
+    "static/css/main.40cb3ebe.css",
+    "static/js/main.c1fc4465.js"
   ]
 }
