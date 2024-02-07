@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/OSIS/static/css/main.40cb3ebe.css",
-    "main.js": "/OSIS/static/js/main.c1fc4465.js",
+    "main.css": "/OSIS/static/css/main.aa5e7074.css",
+    "main.js": "/OSIS/static/js/main.56803a32.js",
     "static/media/waves-hover.png": "/OSIS/static/media/waves-hover.031a6c396b135a6f7c7b.png",
     "static/media/waves.png": "/OSIS/static/media/waves.69a04e3a7d0211fb3443.png",
     "static/media/directions-wave-parallax.png": "/OSIS/static/media/directions-wave-parallax.35978786fa738d2ea9fa.png",
@@ -54,16 +54,19 @@
     "static/media/ebay.svg": "/OSIS/static/media/ebay.418d833bbe0e26661fd4.svg",
     "static/media/nokia.svg": "/OSIS/static/media/nokia.7a8637f30df0f9aea149.svg",
     "static/media/linkedin-icon.svg": "/OSIS/static/media/linkedin-icon.2c479b0cdaa6639dd05b.svg",
+    "static/media/Icon_arrow-expand-vertical_24.svg": "/OSIS/static/media/Icon_arrow-expand-vertical_24.7cb4cb35499baf7aa235.svg",
     "index.html": "/OSIS/index.html",
     "static/media/facebook-icon.svg": "/OSIS/static/media/facebook-icon.3f686a96c35cb0c9ac2b.svg",
+    "static/media/cross.svg": "/OSIS/static/media/cross.455814c976465621d1db.svg",
+    "static/media/error_cross.svg": "/OSIS/static/media/error_cross.bc7f031a71934d76f7cf.svg",
     "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b5974efaefa9b.svg",
     "static/media/chevron-down.svg": "/OSIS/static/media/chevron-down.c343d1a39a5b3946309e.svg",
     "static/media/chevron-up.svg": "/OSIS/static/media/chevron-up.5b19f08e2afb92d90b69.svg",
-    "main.40cb3ebe.css.map": "/OSIS/static/css/main.40cb3ebe.css.map",
-    "main.c1fc4465.js.map": "/OSIS/static/js/main.c1fc4465.js.map"
+    "main.aa5e7074.css.map": "/OSIS/static/css/main.aa5e7074.css.map",
+    "main.56803a32.js.map": "/OSIS/static/js/main.56803a32.js.map"
   },
   "entrypoints": [
-    "static/css/main.40cb3ebe.css",
-    "static/js/main.c1fc4465.js"
+    "static/css/main.aa5e7074.css",
+    "static/js/main.56803a32.js"
   ]
 }
