@@ -9,7 +9,7 @@
   &__container {
     @include container;
 
-    padding: 24px $padding-sides;
+    padding: 24px $padding-sides-page;
 
     display: flex;
     justify-content: space-between;

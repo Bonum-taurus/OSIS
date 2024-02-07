@@ -3,7 +3,7 @@
 .directions {
   @include container;
 
-  padding: 128px $padding-sides 0;
+  padding: $padding-top-page $padding-sides-page 0;
 
   @include grid;
 

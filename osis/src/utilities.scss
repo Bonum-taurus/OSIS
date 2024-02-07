@@ -11,8 +11,10 @@ $button-color: #0173db;
 $active-color: #152356;
 $footer-color: #def9ff;
 $disabled-color: #d7dae4;
+$error-color: #d15f4f;
 
-$padding-sides: 40px;
+$padding-top-page: 128px;
+$padding-sides-page: 40px;
 
 @mixin container {
   max-width: 1280px;
@@ -74,5 +76,46 @@ $padding-sides: 40px;
         transform: scale(1.1);
       }
     }
+  }
+}
+
+@mixin field-form {
+  outline: none;
+
+  padding: 16px;
+
+  border-radius: 8px;
+  border: 1px solid #152356;
+
+  box-shadow: 0 0 2px 0 $font-main-color;
+
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $footer-color;
+  }
+
+  &:focus {
+    border: 2px solid $button-color;
+    box-shadow: inset 0 0 2px 0 $button-color;
+    background-color: transparent;
+
+    transition: all 0s;
+  }
+
+  &--error {
+    border: 2px solid $error-color;
+    box-shadow: 0 0 2px 0 $error-color;
+    transition: all 0s;
+  }
+
+  &--error:hover {
+    background-color: transparent;
+  }
+
+  &--error:focus {
+    border: 2px solid $error-color;
+    box-shadow: 0 0 2px 0 $error-color;
+    transition: all 0s;
   }
 }

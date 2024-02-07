@@ -1,7 +1,18 @@
 @import '../../utilities.scss';
 
+@mixin arrow-spinner-wrapper {
+  background-color: $active-color;
+  border-radius: 100px;
+  padding: 16px 24px;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
 .button-consultation {
   border: none;
+  outline: none;
 
   width: 384px;
   height: 80px;
@@ -27,13 +38,7 @@
   }
 
   &__arrow {
-    background-color: $active-color;
-    border-radius: 100px;
-    padding: 16px 24px;
-
-    display: flex;
-    justify-content: right;
-    align-items: center;
+    @include arrow-spinner-wrapper;
 
     transition: all .5s;
   }
@@ -44,5 +49,37 @@
 
   &:active {
     background-color: $active-color;
+  }
+
+  &--disable {
+    background-color: $disabled-color;
+    pointer-events: none;
+
+    transition: all 0s;
+  }
+
+  &--disable &__arrow {
+    display: none;
+  }
+
+  &__spinner {
+    @include arrow-spinner-wrapper;
+  }
+
+  &__spinner-icon {
+    animation: moveSpinner linear .8s infinite;
+  }
+
+  &--block-submit {
+    pointer-events: none;
+  }
+}
+
+@keyframes moveSpinner {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

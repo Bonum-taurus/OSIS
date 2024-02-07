@@ -1,0 +1,151 @@
+@import '../../utilities.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 32px;
+  }
+
+  &__name {
+    color: #152356;
+    font-size: 16px;
+    line-height: 150%;
+
+    margin-bottom: 8px;
+  }
+
+  &__wrapper-input {
+    position: relative;
+  }
+
+  &__placeholder-tail {
+    @include text;
+
+    position: absolute;
+    left: 55px;
+    top: 50%;
+
+    transform: translateY(-58%)
+  }
+
+  &__input {
+    @include field-form;
+    @include text;
+    
+    width: 100%;
+    height: 70px;
+
+    &--tell::placeholder {
+      color: $active-color;
+    }
+
+    &:-webkit-autofill ~ span,
+    &:-webkit-autofill:hover ~ span, 
+    &:-webkit-autofill:focus ~ span {
+      display: none;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover, 
+    &:-webkit-autofill:focus{
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  &__input-cross {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    background-image: url(../../images/Form/cross.svg);
+
+    cursor: pointer;
+
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--error {
+      background-image: url(../../images/Form/error_cross.svg);
+    }
+  }
+
+  &__textarea {
+    display: block;
+
+    @include field-form;
+
+    transition: all 0s;
+    @include text;
+
+    width: 100%;
+    height: 212px;
+
+    background-image: url(../../images/Form/Icon_arrow-expand-vertical_24.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: right 8px bottom 10px;
+
+    &::placeholder {
+      @include text;
+    }
+
+    &::-webkit-resizer {
+      display: none;
+    }
+  }
+
+  &__success {
+    background-color: $footer-color;
+    border-radius: 8px;
+    padding: 16px;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__success-text {
+    color: $active-color;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  &__success-cross {
+    width: 16px;
+    height: 16px;
+
+    background-image: url(../../images/Form/cross.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  &__not-success {
+    border: 2px solid $error-color;
+
+    border-radius: 8px;
+    padding: 16px;
+
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__not-success-text {
+    color: $error-color;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

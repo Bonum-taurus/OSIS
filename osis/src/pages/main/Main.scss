@@ -85,7 +85,7 @@
 .about {
   @include grid;
 
-  padding: 0 $padding-sides;
+  padding: 0 $padding-sides-page;
 
   position: relative;
 
@@ -141,7 +141,7 @@
 .indicators {
   @include grid;
 
-  padding: 0 $padding-sides;
+  padding: 0 $padding-sides-page;
 
   &__it {
     grid-column: 2 / 6;
@@ -224,7 +224,7 @@
 .clients {
   @include grid;
 
-  padding: 0 $padding-sides;
+  padding: 0 $padding-sides-page;
 
   &__title {
     @include title();
