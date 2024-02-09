@@ -7,7 +7,7 @@ import axios from 'axios';
 
 export const Form = () => {
   const [name, setName] = useState<string>('');
-  const [phone, setPhone] = useState<string>(''); 
+  const [phone, setPhone] = useState<string>('+380'); 
   const [comment, setComment] = useState<string>('');
 
   const [isTouchName, setIsTouchName] = useState<number>(0);
@@ -16,7 +16,7 @@ export const Form = () => {
   const [errorName, setErrorName] = useState<boolean>(false);
   const [errorPhone, setErrorPhone] = useState<boolean>(false);
 
-  const [isSpinner, setIsSpinner] = useState<boolean>(false)
+  const [submiting, setSubmiting] = useState<boolean>(false)
   const [success, setSuccess] = useState<boolean>(false)
   const [notSuccess, setNotSuccess] = useState<string>('')
 
@@ -43,7 +43,7 @@ export const Form = () => {
   }
 
   const handleFocusName = () => {
-    if (isTouchPhone === 1 && !phone) {
+    if (isTouchPhone === 1 && phone.length === 4) {
       setErrorPhone(true);
     }
 
@@ -55,18 +55,15 @@ export const Form = () => {
   }
 
   const handleChangePhone = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.value.trim() === '') {
-      setPhone('');
+    if (event.target.value.trim() !== event.target.value) {
+      setPhone(phone);
 
       return;
     }
 
-    if (phone === '' && event.target.value === '+') {
-      setPhone('+380');
-      setErrorPhone(false);
-
+    if (event.target.value.slice(0, 4) !== '+380') {
       return;
-    }
+    } 
 
     if (!paternPhoneInput.test(event.target.value)) {
       setPhone(event.target.value);
@@ -105,7 +102,7 @@ export const Form = () => {
       setErrorName(true);
     }
 
-    if (!phone) {
+    if (phone.length === 4) {
       setErrorPhone(true);
     }
 
@@ -114,7 +111,7 @@ export const Form = () => {
 
   const reset = () => {
     setName('');
-    setPhone('');
+    setPhone('+380');
     setComment('');
   }
 
@@ -122,18 +119,18 @@ export const Form = () => {
     event.preventDefault();
 
     if (!name) {
-      setErrorName(!name);
+      setErrorName(true);
     }
 
     if (!paternPhoneSubmit.test(phone)) {
-      setErrorPhone(!paternPhoneSubmit.test(phone));
+      setErrorPhone(true);
     }
 
     if (!name || !paternPhoneSubmit.test(phone)) {
       return;
     }
 
-    setIsSpinner(true);
+    setSubmiting(true);
     setNotSuccess('');
 
     axios.post('https://osis-server.onrender.com/api/cooperation/', 
@@ -144,7 +141,7 @@ export const Form = () => {
       })
       .then(() => {
         reset();
-        setIsSpinner(false)
+        setSubmiting(false)
         setSuccess(true);
         setIsTouchName(0);
         setIsTouchPhone(0);
@@ -152,7 +149,7 @@ export const Form = () => {
       .catch(error => {
         setNotSuccess(error.message);
         window.setTimeout(() => {
-          setIsSpinner(false);
+          setSubmiting(false);
         }, 3000)
       })
   }
@@ -169,6 +166,7 @@ export const Form = () => {
 
         <div className="form__wrapper-input">
           <input
+            disabled={submiting}
             onChange={handleChangeName}
             onFocus={handleFocusName}
             value={name}
@@ -201,30 +199,24 @@ export const Form = () => {
 
         <div className="form__wrapper-input">
           <input
+            disabled={submiting}
             onChange={handleChangePhone}
             onFocus={handleFocusPhone}
             value={phone}
-            className={classNames('form__input form__input--tell', {
+            className={classNames('form__input', {
               'form__input--error': errorPhone,
             })} 
             name="phone_number"
             type="tell"
-            placeholder="+380" 
           />
- 
-          {!phone && (
-            <span className="form__placeholder-tail">
-              xxxxxxxxx
-            </span>
-          )}
 
-          {phone && (
+          {phone.length > 4 && (
             <span 
               className={classNames('form__input-cross', {
                'form__input-cross--error': errorPhone,
               })}
               onClick={() => {
-                setPhone('');
+                setPhone('+380');
                 setErrorPhone(false);
               }}
             ></span>
@@ -237,37 +229,36 @@ export const Form = () => {
           Коментар
         </span>
         <textarea
+          disabled={submiting}
           onChange={handleChangeComment}
           onFocus={handleFocusComment}
           value={comment}
           name="commentary"
-          className="form__textarea"
-          placeholder="Що б ви хотіли обговорити?" 
+          className="form__textarea" 
         />
       </label>
 
-      {success && (
-        <div className="form__success">
+      <div className={classNames('form__success', {
+          'form__success--show-success': success,
+          'form__success--show-error': notSuccess,
+        })}>
           <span className="form__success-text">
-            Ваш запит успішно відправлено. Ми з Вами зв’яжемось.
+            {notSuccess ? (
+              notSuccess
+            ) : (
+              'Ваш запит успішно відправлено. Ми з Вами зв’яжемось.'
+            )} 
           </span>
           <span className="form__success-cross"
             onClick={() => setSuccess(false)}
           ></span>
         </div>
-      )}
-
-      {notSuccess && (
-        <div className="form__not-success">
-          <span className="form__not-success-text">
-            {notSuccess}
-          </span>
-        </div>
-      )}
 
       <div className="form__button">
-        <ButtonConsultation 
-          isSpinner={isSpinner}
+        <ButtonConsultation
+          success={success}
+          notSuccess={notSuccess} 
+          isSubmiting={submiting}
           errorName={errorName}
           errorPhone={errorPhone}
         />

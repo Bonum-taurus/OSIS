@@ -3,18 +3,21 @@ import classNames from 'classnames';
 
 import './ButtonConsultation.scss';
 import arrow from '../../images/button/arrow-nav.svg';
-import spinner from '../../images/button/spinner.png';
 
 type Props = {
-  isSpinner?: boolean,
+  isSubmiting?: boolean,
   errorName?: boolean,
-  errorPhone?: boolean
+  errorPhone?: boolean,
+  success?: boolean,
+  notSuccess?: string,
 }
 
 export const ButtonConsultation: React.FC<Props> = ({ 
-  isSpinner,
+  isSubmiting,
   errorName,
   errorPhone,
+  success,
+  notSuccess,
 }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -22,6 +25,7 @@ export const ButtonConsultation: React.FC<Props> = ({
   const handleClick = () => {
     if (pathname !== '/contacts') {
       navigate('/contacts');
+      window.scrollTo({ top: 0, behavior: "smooth" });
 
       return;
     }
@@ -32,29 +36,26 @@ export const ButtonConsultation: React.FC<Props> = ({
       type="submit" 
       className={classNames('button-consultation', {
         'button-consultation--disable': errorName || errorPhone,
-        'button-consultation--block-submit': isSpinner,
+        'button-consultation--submiting': isSubmiting,
       })}
+      style={
+        pathname === '/contacts' ?
+          {transform: success || notSuccess ? 'translateY(0)' : 'translateY(-85px)'} :
+          {transform: 'translateY(0)'}
+      }
       onClick={handleClick}
     >
       <span className="button-consultation__name">
-        {isSpinner ? 'Відправка' : 'Зв’язатися з нами'}
+        Зв’язатися з нами
       </span>
 
-      <>
-        {isSpinner ? (
-          <span className="button-consultation__spinner">
-            <img 
-              className="button-consultation__spinner-icon"
-              src={spinner} 
-              alt="spinner"
-            />
-          </span>
-        ) : (
-          <span className="button-consultation__arrow">
-            <img src={arrow} alt="arrow"/>
-          </span>
-        )}
-      </>
+      <span className="button-consultation__arrow">
+        <img 
+          className="button-consultation__arrow-icon"
+          src={arrow} 
+          alt="arrow"
+        />
+      </span>
     </button>
   )
 }

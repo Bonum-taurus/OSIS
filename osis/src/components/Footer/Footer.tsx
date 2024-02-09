@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
-      	<div className="footer__address">
+        <div className="footer__address">
           <span className="footer__name">Адреса</span>
           <a
             className="footer__link" 

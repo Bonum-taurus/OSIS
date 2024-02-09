@@ -14,10 +14,10 @@
   border: none;
   outline: none;
 
-  width: 384px;
+  width: max-content;
   height: 80px;
 
-  padding: 10px 40px;
+  padding: 10px 30px 10px 40px;
 
   cursor: pointer;
 
@@ -25,61 +25,69 @@
   border-radius: 100px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   transition: all .5s;
+  animation-direction: alternate;
 
   &__name {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
     line-height: 150%;
+
+    transition: all .5s;
+    transform: translateX(30px);
   }
 
   &__arrow {
     @include arrow-spinner-wrapper;
 
     transition: all .5s;
+
+    transform: scale(0);
+  }
+
+  &:hover &__name {
+    transform: translateX(-10px)
   }
 
   &:hover &__arrow {
-    padding-left: 100px;
-  }
-
-  &:active {
-    background-color: $active-color;
+    transform: scale(1);
   }
 
   &--disable {
     background-color: $disabled-color;
     pointer-events: none;
-
-    transition: all 0s;
   }
 
   &--disable &__arrow {
-    display: none;
+    transform: scale(0);
   }
 
-  &__spinner {
-    @include arrow-spinner-wrapper;
-  }
-
-  &__spinner-icon {
-    animation: moveSpinner linear .8s infinite;
-  }
-
-  &--block-submit {
+  &--submiting {
     pointer-events: none;
+  }
+
+  &--submiting &__name {
+    transform: translateX(-10px)
+  }
+
+  &--submiting &__arrow {
+    transform: scale(1);
+  }
+
+  &--submiting &__arrow-icon {
+    animation: flyArrow linear 1s infinite;
   }
 }
 
-@keyframes moveSpinner {
-  from {
-    transform: rotate(0);
+@keyframes flyArrow {
+  0% {
+    transform: translateX(-120%) scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(130%) scale(0.2);
   }
 }

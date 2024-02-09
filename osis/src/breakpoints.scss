@@ -1,0 +1,14 @@
+$breakpoints-lapTop: 1024px;
+$breakpoints-tablet: 744px;
+
+@mixin lapTop {
+  @media (max-width: $breakpoints-lapTop) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoints-tablet) {
+    @content;
+  }
+}

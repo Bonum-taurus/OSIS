@@ -1,7 +1,19 @@
+@import './breakpoints.scss';
+
 @font-face {
   font-family: 'Kharkiv';
   src: url('fonts/Kharkiv\ Tone\ 04.10.2020.ttf');
   font-weight: 400;
+}
+
+:root {
+  --padding-sides-page: 40px;
+}
+
+@include lapTop {
+  :root {
+    --padding-sides-page: 32px;
+  }
 }
 
 $title-font: 'Kharkiv';
@@ -14,7 +26,7 @@ $disabled-color: #d7dae4;
 $error-color: #d15f4f;
 
 $padding-top-page: 128px;
-$padding-sides-page: 40px;
+$padding-sides-page: var(--padding-sides-page);
 
 @mixin container {
   max-width: 1280px;
@@ -25,6 +37,10 @@ $padding-sides-page: 40px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 24px;
+
+  @include lapTop {
+    column-gap: 16px;
+  }
 }
 
 @mixin title($font-size: 90px) {
@@ -52,11 +68,15 @@ $padding-sides-page: 40px;
 
   width: 282px;
   height: 180px;
-  padding: 16px;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1279px) {
+    width: 100%;
+    min-height: 100%;
+  }
 }
 
 @mixin cardLoop($items, $selector) {
@@ -74,12 +94,17 @@ $padding-sides-page: 40px;
       .#{$selector}:hover & {
         background-image: $hover;
         transform: scale(1.1);
+
+        @media (max-width: 1279px) {
+          transform: scale(1);
+        }
       }
     }
   }
 }
 
 @mixin field-form {
+  @include text;
   outline: none;
 
   padding: 16px;
@@ -90,10 +115,6 @@ $padding-sides-page: 40px;
   box-shadow: 0 0 2px 0 $font-main-color;
 
   transition: all 0.3s;
-
-  &:hover {
-    background-color: $footer-color;
-  }
 
   &:focus {
     border: 2px solid $button-color;
@@ -116,6 +137,5 @@ $padding-sides-page: 40px;
   &--error:focus {
     border: 2px solid $error-color;
     box-shadow: 0 0 2px 0 $error-color;
-    transition: all 0s;
   }
 }

@@ -23,26 +23,11 @@
     position: relative;
   }
 
-  &__placeholder-tail {
-    @include text;
-
-    position: absolute;
-    left: 55px;
-    top: 50%;
-
-    transform: translateY(-58%)
-  }
-
   &__input {
     @include field-form;
-    @include text;
     
     width: 100%;
     height: 70px;
-
-    &--tell::placeholder {
-      color: $active-color;
-    }
 
     &:-webkit-autofill ~ span,
     &:-webkit-autofill:hover ~ span, 
@@ -77,24 +62,18 @@
   }
 
   &__textarea {
-    display: block;
-
     @include field-form;
-
-    transition: all 0s;
-    @include text;
 
     width: 100%;
     height: 212px;
 
-    background-image: url(../../images/Form/Icon_arrow-expand-vertical_24.svg);
+    background-image: url(../../images/Form/resize.svg);
     background-repeat: no-repeat;
-    background-size: 24px 24px;
-    background-position: right 8px bottom 10px;
+    background-size: 44px 44px;
+    background-position: right -10px bottom -8px;
 
-    &::placeholder {
-      @include text;
-    }
+    resize: vertical;
+    transition: resize 0s;
 
     &::-webkit-resizer {
       display: none;
@@ -102,6 +81,9 @@
   }
 
   &__success {
+    transform: scale(0);
+    transform-origin: top center;
+
     background-color: $footer-color;
     border-radius: 8px;
     padding: 16px;
@@ -111,6 +93,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    transition: all .5s;
+
+    &--show-success {
+      transform: scale(1);
+    }
+
+    &--show-error {
+      transform: scale(1);
+      background-color: transparent;
+      border: 2px solid $error-color;
+    }
+
+    &--show-error .form__success-cross {
+      display: none;
+    }
+
+   &--show-error .form__success-text {
+      color: $error-color;
+    }
   }
 
   &__success-text {
@@ -123,29 +125,10 @@
     width: 16px;
     height: 16px;
 
-    background-image: url(../../images/Form/cross.png);
+    background-image: url(../../images/Form/cross-success.png);
     background-repeat: no-repeat;
     background-position: center;
 
     cursor: pointer;
-  }
-
-  &__not-success {
-    border: 2px solid $error-color;
-
-    border-radius: 8px;
-    padding: 16px;
-
-    margin-bottom: 40px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__not-success-text {
-    color: $error-color;
-    font-size: 16px;
-    line-height: 150%;
   }
 }

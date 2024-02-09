@@ -1,12 +1,14 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_248_18560)">
-<path d="M12.4688 15.375L15.375 12.4688V11.2188L11.2188 15.375H12.4688Z" fill="black" stroke="black" stroke-width="0.5"/>
-<path d="M7.16846 15.3762L15.3747 7.16992V5.91992L5.91846 15.3762H7.16846Z" fill="black" stroke="black" stroke-width="0.5"/>
-<path d="M0.625 15.375H1.875L15.375 1.875V0.625L0.625 15.375Z" fill="black" stroke="black" stroke-width="0.5"/>
-</g>
-<defs>
-<clipPath id="clip0_248_18560">
-<rect width="16" height="16" fill="white"/>
-</clipPath>
-</defs>
+<svg width="44.000000" height="44.000000" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip695_8578">
+			<rect id="Icon/arrow-expand-vertical/24" width="24.000000" height="24.000000" transform="translate(10.000000 10.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="Icon/arrow-expand-vertical/24" width="24.000000" height="24.000000" transform="translate(10.000000 10.000000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip695_8578)">
+		<path id="Vector" d="M23 19L23 25L26 25L22 29L18 25L21 25L21 19L18 19L22 15L26 19L23 19ZM14 12L30 12L30 14L14 14L14 12ZM14 30L30 30L30 32L14 32L14 30Z" fill="#595D6A" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
 </svg>

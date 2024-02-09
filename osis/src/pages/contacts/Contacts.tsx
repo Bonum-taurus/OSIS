@@ -81,7 +81,7 @@ export const Contacts = () => {
           <Parallax 
             className="contacts__parallax" 
             translateX={['-38%', '-38%']}
-            translateY={['-38%', '38%']}
+            translateY={['-38%', '25%']}
           >
             <WaveParallax wave={wave} />
           </Parallax>
@@ -91,9 +91,6 @@ export const Contacts = () => {
           <h3 className="contacts__subtitle">
             Маєте питання?
           </h3>
-          <p className="contacts__text">
-            Наша команда експертів готова відповісти на ваші запитання, дати вам більше інформації та допомогти.
-          </p>
           <div className="contacts__form">
             <Form/>
           </div>
