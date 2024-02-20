@@ -8,11 +8,19 @@
 
 :root {
   --padding-sides-page: 40px;
+  --padding-top-page: 128px;
 }
 
 @include lapTop {
   :root {
     --padding-sides-page: 32px;
+  }
+}
+
+@include mobile {
+  :root {
+    --padding-sides-page: 16px;
+    --padding-top-page: 90px;
   }
 }
 
@@ -25,7 +33,7 @@ $footer-color: #def9ff;
 $disabled-color: #d7dae4;
 $error-color: #d15f4f;
 
-$padding-top-page: 128px;
+$padding-top-page: var(--padding-top-page);
 $padding-sides-page: var(--padding-sides-page);
 
 @mixin container {
@@ -40,6 +48,10 @@ $padding-sides-page: var(--padding-sides-page);
 
   @include lapTop {
     column-gap: 16px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -73,9 +85,13 @@ $padding-sides-page: var(--padding-sides-page);
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 1279px) {
+  @include deskTop {
     width: 100%;
     min-height: 100%;
+  }
+
+  @include tablet {
+    height: 140px;
   }
 }
 
@@ -83,7 +99,7 @@ $padding-sides-page: var(--padding-sides-page);
   width: 100%;
   height: 100%;
 
-  transition: background .3s ease;
+  transition: all .3s ease;
 
   @each $num, $logo, $hover in $items {
     &--#{$num} {
@@ -91,12 +107,28 @@ $padding-sides-page: var(--padding-sides-page);
       background-repeat: no-repeat;
       background-position: center;
 
+      @include tablet {
+        background-size: 140px 110px;
+      }
+
+      @include mobile {
+        background-size: 80px 110px;
+      }
+
       .#{$selector}:hover & {
         background-image: $hover;
         transform: scale(1.1);
 
         @media (max-width: 1279px) {
           transform: scale(1);
+        }
+
+        @include tablet {
+          transform: scale(1.1);
+        }
+
+        @include mobile {
+          transform: scale(1.3);
         }
       }
     }

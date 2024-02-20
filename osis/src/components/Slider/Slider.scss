@@ -2,6 +2,10 @@
 
 .swiper {
   padding: 0 3.7% 70px !important;
+
+  @include mobile {
+    padding-bottom: 0 !important;
+  }
 }
 
 .swiper-pagination-bullets {
@@ -16,6 +20,15 @@
   height: 24px !important;
   background-color: $disabled-color !important;
   opacity: 1 !important;
+
+  @include tablet {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  @include mobile {
+    display: none !important;
+  }
 }
 
 .swiper-pagination-bullet-active {

@@ -8,15 +8,19 @@ import "swiper/css/pagination";
 import { LogoCard } from '../LogoCard';
 
 import { generateAmountCards } from '../../services/generateCards';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Slider = () => {
+  const lapTop = useMediaQuery('(max-width:1024px)')
+  const pre_mobile = useMediaQuery('(max-width:625px)')
+
   return (
     <Swiper
       className="main__swiper-slider"
       modules={[Grid, Pagination]}
       spaceBetween={16}
-      slidesPerView={4}
-      slidesPerGroup={4}
+      slidesPerView={pre_mobile ? 2 : lapTop ? 3 : 4}
+      slidesPerGroup={pre_mobile ? 2 : lapTop ? 3 : 4}
       speed={2000}
       pagination={
         { clickable: true }

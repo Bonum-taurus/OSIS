@@ -7,6 +7,10 @@
 
   @include grid;
 
+  @include pre-mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   &__title {
     @include title();
 
@@ -17,6 +21,32 @@
     &--vendors {
       grid-row: 3 / 4;
     }
+
+    @include deskTop {
+      @include title(80px);
+    }
+
+    @include lapTop {
+      @include title(70px);
+    }
+
+    @include tablet {
+      @include title(60px);
+
+      grid-column: 1 / 8;
+    }
+
+    @include pre-mobile {
+      @include title(40px);
+
+      grid-column: 1 / 5;
+
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__parallax-box-left {
@@ -24,6 +54,11 @@
     grid-row: 2 / 4;
 
     position: relative;
+    z-index: -2;
+
+    @include pre-mobile {
+      grid-column: 1 / 3;
+    }
   }
 
   &__parallax-left {
@@ -39,6 +74,10 @@
     grid-row: 3 / 4;
 
     position: relative;
+
+    @include pre-mobile {
+      grid-column: 3 / 5;
+    }
   }
 
   &__parallax-right {
@@ -54,6 +93,22 @@
     grid-row: 2 / 3;
 
     margin-bottom: 100px;
+
+    @include lapTop {
+      grid-column: 5 / 13; 
+    }
+
+    @include tablet {
+      grid-column: 4 / 13; 
+    }
+
+    @include pre-mobile {
+      grid-column: 1 / 5;
+    }
+
+    @include mobile {
+      margin-bottom: 60px;
+    }
   }
 
   &__vendors-text {
@@ -63,6 +118,14 @@
     grid-row: 4 / 5;
 
     margin-bottom: 40px;
+
+    @include tablet {
+      grid-column: 4 / 13;
+    }
+
+    @include pre-mobile {
+      grid-column: 1 / 5;
+    }
   }
 
   &__vendors-logos {
@@ -75,5 +138,13 @@
     gap: 24px;
 
     margin-bottom: 100px;
+
+    @include deskTop {
+      gap: 16px;
+    }
+
+    @include pre-mobile {
+      grid-column: 1 / 5;
+    }
   }
 }

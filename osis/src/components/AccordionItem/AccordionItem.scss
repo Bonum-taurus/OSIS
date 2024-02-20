@@ -24,6 +24,10 @@ $transition-open: all 0.8s;
 
     margin-bottom: $triger-margin-bottom;
 
+    @include tablet {
+      margin-bottom: 24px;
+    }
+
     &--last {
       margin-bottom: 0;
     }
@@ -34,6 +38,10 @@ $transition-open: all 0.8s;
     letter-spacing: 1px;
     font-size: 24px;
     line-height: 150%;
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__triger-arrow {
@@ -58,6 +66,10 @@ $transition-open: all 0.8s;
     padding-left: 50px;
     
     overflow: hidden;
+
+    @include tablet {
+      padding-left: 20px;
+    }
   }
 
   &__inner-point {
@@ -72,6 +84,10 @@ $transition-open: all 0.8s;
 
   &--active {
     margin-bottom: 64px;
+
+    @include tablet {
+      margin-bottom: 44px;
+    }
   }
 
   &--active &__triger-arrow {
@@ -80,6 +96,10 @@ $transition-open: all 0.8s;
 
   &--active &__triger--last {
     margin-bottom: $triger-margin-bottom;
+
+    @include tablet {
+      margin-bottom: 24px;
+    }
   }
 
   &--active.accordion-item--last {

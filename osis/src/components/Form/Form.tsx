@@ -224,7 +224,7 @@ export const Form = () => {
         </div>
       </label>
 
-      <label className="form__label">
+      <label className="form__label form__label--textarea">
         <span className="form__name">
           Коментар
         </span>
@@ -246,7 +246,18 @@ export const Form = () => {
             {notSuccess ? (
               notSuccess
             ) : (
-              'Ваш запит успішно відправлено. Ми з Вами зв’яжемось.'
+              <>
+                <span 
+                  className="form__success-first-text"
+                >
+                  Ваш запит успішно відправлено.
+                </span> 
+                <span 
+                  className="form__success-second-text"
+                > 
+                  Ми з Вами зв’яжемось.
+                </span>
+              </>
             )} 
           </span>
           <span className="form__success-cross"

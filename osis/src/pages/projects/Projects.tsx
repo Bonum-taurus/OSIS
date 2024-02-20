@@ -6,7 +6,13 @@ import { WaveParallax } from '../../components/WaveParallax';
 import wave_left from '../../images/parallax/projects-wave-parallax.png';
 import wave_right from '../../images/parallax/directions-wave-parallax.png';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 export const Projects = () => {
+  const deskTop = useMediaQuery('(max-width:1279px)');
+  const lapTop = useMediaQuery('(max-width:1024px)');
+  const tablet = useMediaQuery('(max-width:744px)');
+
   return (
     <section className="projects">
       <h2 className="projects__title">
@@ -36,6 +42,9 @@ export const Projects = () => {
         <Parallax 
           className="projects__parallax-left"
           translateY={['-80%', '160%']}
+          translateX={lapTop ? ['-38%', '-38%'] : deskTop ? ['-20%', '-20%'] : ['0', '0']}
+          scaleX={tablet ? [0.7, 0.7] : [1, 1]}
+          scaleY={tablet ? [0.7, 0.7] : [1, 1]}
         >
           <WaveParallax wave={wave_left} />
         </Parallax>
@@ -44,7 +53,7 @@ export const Projects = () => {
       <h3 className="projects__subtitle">
         «Українські вертольоти»
       </h3>
-      <article className="projects__block">
+      <article className="projects__block projects__block--helicopters">
         <h4 className="projects__name">
           Завдання
         </h4>
@@ -64,6 +73,9 @@ export const Projects = () => {
         <Parallax 
           className="projects__parallax-right"
           translateY={['0%', '-180%']}
+          translateX={lapTop ? ['33%', '33%'] : deskTop ? ['10%', '10%'] : ['0', '0']}
+          scaleX={tablet ? [0.7, 0.7] : [1, 1]}
+          scaleY={tablet ? [0.7, 0.7] : [1, 1]}
         >
           <WaveParallax wave={wave_right} />
         </Parallax>

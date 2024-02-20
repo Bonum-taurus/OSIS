@@ -10,6 +10,8 @@ type Props = {
   errorPhone?: boolean,
   success?: boolean,
   notSuccess?: string,
+  setIsOpenBurger?: (burger: boolean) => void;
+  setIsBodyHidden?: (hidden: boolean) => void;
 }
 
 export const ButtonConsultation: React.FC<Props> = ({ 
@@ -18,6 +20,8 @@ export const ButtonConsultation: React.FC<Props> = ({
   errorPhone,
   success,
   notSuccess,
+  setIsOpenBurger,
+  setIsBodyHidden,
 }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -26,6 +30,11 @@ export const ButtonConsultation: React.FC<Props> = ({
     if (pathname !== '/contacts') {
       navigate('/contacts');
       window.scrollTo({ top: 0, behavior: "smooth" });
+
+      if (setIsOpenBurger && setIsBodyHidden) {
+        setIsOpenBurger(false);
+        setIsBodyHidden(false);
+      }
 
       return;
     }

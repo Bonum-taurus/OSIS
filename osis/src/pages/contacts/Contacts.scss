@@ -13,6 +13,24 @@
     grid-column: 2 / 8;
 
     margin-bottom: 60px;
+
+    @include lapTop {
+      @include title(70px);
+    }
+
+    @include tablet {
+      @include title(60px);
+
+      grid-column: 1 / 8;
+    }
+
+    @include mobile {
+      @include title(40px);
+
+      grid-column: 1 / 5;
+
+      margin-bottom: 30px;
+    }
   }
 
   &__type {
@@ -23,8 +41,78 @@
 
     margin-bottom: 32px;
 
+    @include lapTop {
+      grid-column: 1 / 5;
+    }
+
+    @include tablet {
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      grid-column: 1 / 5;
+
+      margin-bottom: 32px;
+    }
+
     &--address {
       padding-right: 15px;
+
+      @include tablet {
+        grid-column: 2 / 6;
+      }
+
+      @include pre-mobile {
+        grid-column: 1 / 5;
+      }
+    }
+
+    &--email {
+      @include tablet {
+        grid-column: 6 / 9;
+        grid-row: 2 / 3;
+      }
+
+      @include pre-mobile {
+        grid-column: 5 / 8;
+      }
+
+      @include mobile {
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+      }
+    }
+
+    &--phone {
+      @include tablet {
+        grid-column: 6 / 10;
+        grid-row: 2 / 3;
+
+        margin-top: 60px;
+      }
+
+      @include pre-mobile {
+        grid-column: 5 / 10;
+      }
+
+      @include mobile {
+        grid-column: 1 / 5;
+        grid-row: 3 / 4;
+      }
+    }
+
+    &--social {
+      @include tablet {
+        grid-column: 10 / 13;
+        grid-row: 2 / 3;
+      }
+
+      @include mobile {
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
+
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -32,6 +120,26 @@
     @include name;
 
     margin-bottom: 8px;
+
+    &--contacts {
+      display: none;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+
+    &--email {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &--phone {
+      @include tablet {
+        display: none;
+      }
+    }
   }
 
   &__social-icons {
@@ -69,6 +177,20 @@
   &__question {
     grid-column: 7 / 13;
     grid-row: 2 / 8;
+
+    @include lapTop {
+      grid-column: 6 / 13;
+    }
+
+    @include tablet {
+      grid-row: 3 / 4;
+      grid-column: 2 / 12;
+    }
+
+    @include mobile {
+      grid-column: 1 / 5;
+      grid-row: 5 / 6;
+    }
   }
 
   &__subtitle {
@@ -81,6 +203,18 @@
 
   &__form {
     margin-bottom: 100px;
+
+    @include lapTop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include pre_mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__map-box {
@@ -89,6 +223,20 @@
     height: 800px;
 
     position: relative;
+
+    @include lapTop {
+      height: 600px;
+    }
+
+    @include pre-mobile {
+      height: 500px;
+    }
+
+    @include mobile {
+      grid-column: 1 / 5;
+
+      height: 350px;
+    }
   }
 
   &__map {
@@ -100,6 +248,18 @@
 
     position: relative;
     z-index: -10;
+
+    @include lapTop {
+      grid-column: 1 / 6;
+    }
+
+    @include tablet {
+      grid-row: 3 / 4;
+    }
+
+    @include mobile {
+      grid-column: 1 / 5;
+    }
   }
 
   &__parallax {

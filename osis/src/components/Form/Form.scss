@@ -9,6 +9,28 @@
     flex-direction: column;
 
     margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 24px;
+
+      &--textarea {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include pre-mobile {
+      &--textarea {
+        margin-bottom: 32px;
+      }
+   }
+
+    @include mobile {
+      margin-bottom: 16px;
+
+      &--textarea {
+        margin-bottom: 24px;
+      }
+    }
   }
 
   &__name {
@@ -98,37 +120,83 @@
 
     &--show-success {
       transform: scale(1);
+
+      @include pre-mobile {
+        margin-bottom: 32px;
+      }
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
     }
 
     &--show-error {
       transform: scale(1);
       background-color: transparent;
       border: 2px solid $error-color;
+
+      @include pre-mobile {
+        margin-bottom: 32px;
+      }
+
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+
+    &--show-success .form__success-text {
+      display: inline;
+    }
+
+    &--show-error .form__success-text {
+      display: inline;
+    }
+
+    &--show-error .form__success-text {
+      color: $error-color;
     }
 
     &--show-error .form__success-cross {
       display: none;
     }
-
-   &--show-error .form__success-text {
-      color: $error-color;
-    }
   }
 
   &__success-text {
+    display: none;
+
     color: $active-color;
     font-size: 16px;
     line-height: 150%;
+  }
+
+  &__success-first-text {
+    margin-right: 5px;
+
+    @include pre-mobile {
+      display: none;
+    }
+  }
+
+  &__success-second-text {
+    display: inline-block;
   }
 
   &__success-cross {
     width: 16px;
     height: 16px;
 
+    margin-left: 15px;
+
     background-image: url(../../images/Form/cross-success.png);
     background-repeat: no-repeat;
     background-position: center;
 
     cursor: pointer;
+  }
+
+  &__button { 
+    @include tablet {
+      margin: 0 auto;
+    }
   }
 }

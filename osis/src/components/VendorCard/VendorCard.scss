@@ -32,6 +32,23 @@ $vendors:
     font-family: $title-font;
   }
 
+  @include deskTop {
+    flex: 1 0 23%;
+    min-height: 180px;
+  }
+
+  @include lapTop {
+    flex: 1 0 31%;
+  }
+
+  @include tablet {
+    min-height: 140px;
+  }
+
+  @include pre-mobile {
+    flex: 1 0 47%;
+  }
+
   &__logo {
     @include cardLoop($vendors, vendor);
 

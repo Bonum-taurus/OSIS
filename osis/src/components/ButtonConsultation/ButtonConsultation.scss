@@ -8,6 +8,10 @@
   display: flex;
   justify-content: right;
   align-items: center;
+
+  @include tablet {
+    padding: 8px 16px;
+  }
 }
 
 .button-consultation {
@@ -31,6 +35,12 @@
   transition: all .5s;
   animation-direction: alternate;
 
+  @include tablet {
+    height: 52px;
+
+    padding: 10px 30px 10px 22px;
+  }
+
   &__name {
     color: #fff;
     font-size: 16px;
@@ -39,6 +49,10 @@
 
     transition: all .5s;
     transform: translateX(30px);
+
+    @include tablet {
+      line-height: normal;
+    }
   }
 
   &__arrow {
@@ -55,6 +69,12 @@
 
   &:hover &__arrow {
     transform: scale(1);
+  }
+
+  @include tablet {
+    &:hover {
+      padding: 10px 30px 10px 40px;
+    }
   }
 
   &--disable {
@@ -80,6 +100,10 @@
 
   &--submiting &__arrow-icon {
     animation: flyArrow linear 1s infinite;
+
+    @include tablet {
+      animation: flyArrowForTablet linear 1s infinite;
+    }
   }
 }
 
@@ -89,5 +113,14 @@
   }
   100% {
     transform: translateX(130%) scale(0.2);
+  }
+}
+
+@keyframes flyArrowForTablet {
+  0% {
+    transform: translateX(-80%) scale(1);
+  }
+  100% {
+    transform: translateX(110%) scale(0.2);
   }
 }

@@ -5,7 +5,14 @@ import { Parallax } from 'react-scroll-parallax';
 import { WaveParallax } from '../../components/WaveParallax';
 import wave from '../../images/parallax/main-wave-parallax.png';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 export const Contacts = () => {
+  const lapTop = useMediaQuery('(max-width:1024px)');
+  const tablet = useMediaQuery('(max-width:744px)');
+  const pre_mobile = useMediaQuery('(max-width:625px)');
+  const mobile = useMediaQuery('(max-width:500px)');
+
   return (
     <>
       <section className="contacts">
@@ -26,8 +33,12 @@ export const Contacts = () => {
           </a>
         </div>
   
-        <div className="contacts__type">
-          <span className="contacts__name">
+        <div className="contacts__type contacts__type--email">
+          <span className="contacts__name contacts__name--contacts">
+            Контакти
+          </span>
+
+          <span className="contacts__name contacts__name--email">
             Email
           </span>
           <a 
@@ -40,8 +51,8 @@ export const Contacts = () => {
           </a>
         </div>
 
-        <div className="contacts__type">
-          <span className="contacts__name">
+        <div className="contacts__type contacts__type--phone">
+          <span className="contacts__name contacts__name--phone">
             Телефон
           </span>
           <a 
@@ -54,7 +65,7 @@ export const Contacts = () => {
           </a>
         </div>
 
-        <div className="contacts__type">
+        <div className="contacts__type contacts__type--social">
           <span className="contacts__name">
             Соцмережі
           </span>
@@ -80,8 +91,10 @@ export const Contacts = () => {
         <div className="contacts__parallax-box">
           <Parallax 
             className="contacts__parallax" 
-            translateX={['-38%', '-38%']}
-            translateY={['-38%', '25%']}
+            translateX={lapTop ? ['-48%', '-48%'] : ['-38%', '-38%']}
+            translateY={mobile ? ['-88%', '85%'] : tablet ? ['-68%', '55%'] : ['-38%', '25%']}
+            scaleX={mobile ? [0.6, 0.6] : pre_mobile ? [0.7, 0.7] : lapTop ? [0.9, 0.9] : [1, 1]}
+            scaleY={mobile ? [0.6, 0.6] : pre_mobile ? [0.8, 0.8] : [1, 1]}
           >
             <WaveParallax wave={wave} />
           </Parallax>

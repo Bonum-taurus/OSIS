@@ -8,7 +8,13 @@ import wave from '../../images/parallax/main-wave-parallax.png';
 
 import { Slider } from '../../components/Slider';
 
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 export const Main = () => {
+  const lapTop = useMediaQuery('(max-width:1024px)');
+  const tablet = useMediaQuery('(max-width:744px)');
+  const mobile = useMediaQuery('(max-width:500px)');
+
   return (
     <div className="main">
       <section className="main__top">
@@ -28,8 +34,10 @@ export const Main = () => {
       <div className="main__parallax-box">
         <Parallax 
           className="main__parallax" 
-          translateY={['-100%', '400%']}
-          translateX={['-70%', '30%']}
+          translateY={lapTop ? ['-100%', '380%'] : ['-100%', '400%']}
+          translateX={lapTop ? 
+            tablet ? ['-40%', '-40%'] : ['-35%', '-35%'] : ['-70%', '30%']}
+          scale={mobile ? ([0.5, 0.5]) : (lapTop ? tablet ? [0.7, 0.7] : [0.7, 1] : [1, 1])}
         >
           <WaveParallax wave={wave} />
         </Parallax>
