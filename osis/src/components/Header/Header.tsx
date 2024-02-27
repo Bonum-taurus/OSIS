@@ -5,8 +5,8 @@ import classNames from 'classnames';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import './Header.scss';
-import logo_main from '../../images/logo/OSIS-logo-white-png.png';
-import logo_general from '../../images/logo/OSIS-logo-png.png';
+import logo_main from '../../images/logo/OSIS-white.svg';
+import logo_general from '../../images/logo/OSIS-logo.svg';
 
 import { ButtonConsultation } from '../ButtonConsultation';
 
