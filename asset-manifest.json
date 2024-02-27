@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OSIS/static/css/main.6d86d7b5.css",
-    "main.js": "/OSIS/static/js/main.34389218.js",
+    "main.js": "/OSIS/static/js/main.846b9a9b.js",
     "static/media/waves-hover.png": "/OSIS/static/media/waves-hover.031a6c396b135a6f7c7b.png",
     "static/media/waves.png": "/OSIS/static/media/waves.69a04e3a7d0211fb3443.png",
     "static/media/directions-wave-parallax.png": "/OSIS/static/media/directions-wave-parallax.35978786fa738d2ea9fa.png",
@@ -36,6 +36,8 @@
     "static/media/renault.svg": "/OSIS/static/media/renault.3297e6b5915a12d9a89c.svg",
     "static/media/vishpha.svg": "/OSIS/static/media/vishpha.8db282f81433b9d84a1d.svg",
     "static/media/cisco.svg": "/OSIS/static/media/cisco.d4886e2c2b943cdde8b2.svg",
+    "static/media/OSIS-white.svg": "/OSIS/static/media/OSIS-white.6f28851c97e2d4b8533af121e469eeb1.svg",
+    "static/media/OSIS-logo.svg": "/OSIS/static/media/OSIS-logo.5321e000ef8620060e43513628a93d6e.svg",
     "static/media/vmware.svg": "/OSIS/static/media/vmware.2492d4eb5d4e5d362625.svg",
     "static/media/solarwinds.svg": "/OSIS/static/media/solarwinds.b4d7d89f0aeb0a4082d3.svg",
     "static/media/Raiffeisen_Bank.svg": "/OSIS/static/media/Raiffeisen_Bank.0a31883b1d59309df085.svg",
@@ -67,10 +69,10 @@
     "static/media/chevron-down.svg": "/OSIS/static/media/chevron-down.c343d1a39a5b3946309e.svg",
     "static/media/chevron-up.svg": "/OSIS/static/media/chevron-up.5b19f08e2afb92d90b69.svg",
     "main.6d86d7b5.css.map": "/OSIS/static/css/main.6d86d7b5.css.map",
-    "main.34389218.js.map": "/OSIS/static/js/main.34389218.js.map"
+    "main.846b9a9b.js.map": "/OSIS/static/js/main.846b9a9b.js.map"
   },
   "entrypoints": [
     "static/css/main.6d86d7b5.css",
-    "static/js/main.34389218.js"
+    "static/js/main.846b9a9b.js"
   ]
 }
