@@ -11,6 +11,7 @@ import { generateAmountCards } from '../../services/generateCards';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Slider = () => {
+  const deskTop4k = useMediaQuery('(min-width:2000px)')
   const lapTop = useMediaQuery('(max-width:1024px)')
   const pre_mobile = useMediaQuery('(max-width:625px)')
 
@@ -18,9 +19,9 @@ export const Slider = () => {
     <Swiper
       className="main__swiper-slider"
       modules={[Grid, Pagination]}
-      spaceBetween={16}
-      slidesPerView={pre_mobile ? 2 : lapTop ? 3 : 4}
-      slidesPerGroup={pre_mobile ? 2 : lapTop ? 3 : 4}
+      spaceBetween={deskTop4k ? 20 : 16}
+      slidesPerView={deskTop4k ? 5 : pre_mobile ? 2 : lapTop ? 3 : 4}
+      slidesPerGroup={deskTop4k ? 4 : pre_mobile ? 2 : lapTop ? 3 : 4}
       speed={2000}
       pagination={
         { clickable: true }

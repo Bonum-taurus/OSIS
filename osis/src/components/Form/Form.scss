@@ -39,6 +39,14 @@
     line-height: 150%;
 
     margin-bottom: 8px;
+
+    @include more-deskTop {
+      font-size: 20px;
+    }
+
+    @include deskTop4k {
+      font-size: 24px;
+    }
   }
 
   &__wrapper-input {
@@ -167,6 +175,10 @@
     color: $active-color;
     font-size: 16px;
     line-height: 150%;
+
+    @include more-deskTop {
+      font-size: 20px;
+    }
   }
 
   &__success-first-text {

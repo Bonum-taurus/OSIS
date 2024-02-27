@@ -11,6 +11,18 @@
   --padding-top-page: 128px;
 }
 
+@include more-deskTop {
+  :root {
+    --padding-top-page: 190px;
+  }
+}
+
+@include deskTop4k {
+  :root {
+    --padding-top-page: 220px;
+  }
+}
+
 @include lapTop {
   :root {
     --padding-sides-page: 32px;
@@ -30,8 +42,11 @@ $font-main-color: #595d6a;
 $button-color: #0173db;
 $active-color: #152356;
 $footer-color: #def9ff;
+$footer-text-color: #fff;
 $disabled-color: #d7dae4;
 $error-color: #d15f4f;
+
+$bg-color: #212529;
 
 $padding-top-page: var(--padding-top-page);
 $padding-sides-page: var(--padding-sides-page);
@@ -39,6 +54,14 @@ $padding-sides-page: var(--padding-sides-page);
 @mixin container {
   max-width: 1280px;
   margin: 0 auto;
+
+  @include more-deskTop {
+    max-width: 1400px;
+  }
+
+  @include deskTop4k {
+    max-width: 1700px;
+  }
 }
 
 @mixin grid {
@@ -66,6 +89,14 @@ $padding-sides-page: var(--padding-sides-page);
   color: $font-main-color;
   line-height: 150%;
   font-size: 17px;
+
+  @include more-deskTop {
+    font-size: 20px;
+  }
+
+  @include deskTop4k {
+    font-size: 24px;
+  }
 }
 
 @mixin name {
@@ -84,6 +115,13 @@ $padding-sides-page: var(--padding-sides-page);
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-color: #fff;
+
+  @include more-deskTop {
+    width: 100%;
+    min-height: 100%;
+  }
 
   @include deskTop {
     width: 100%;
@@ -106,6 +144,13 @@ $padding-sides-page: var(--padding-sides-page);
       background-image: $logo;
       background-repeat: no-repeat;
       background-position: center;
+
+      &::after {
+        content: $hover;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+      }
 
       @include tablet {
         background-size: 140px 110px;

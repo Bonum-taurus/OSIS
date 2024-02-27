@@ -47,7 +47,7 @@ const sections = [
     ]
   },
   {
-    title: 'Structured Cabling System (SCS)',
+    title: 'Structured Cabling System',
     text: [
       'Проектування структурованих кабельних систем', 
       'Встановлення та обслуговування SCS',

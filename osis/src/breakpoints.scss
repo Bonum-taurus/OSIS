@@ -1,9 +1,23 @@
+$breakpoints-4k-deskTop: 2000px;
+$breakpoints-more-deskTop: 1700px;
 $breakpoints-deskTop: 1279px;
 $breakpoints-lapTop: 1024px;
 $breakpoints-tablet: 744px;
 $breakpoints-tablet-less: 720px;
 $breakpoints-pre-mobile: 625px;
 $breakpoints-mobile: 500px;
+
+@mixin deskTop4k {
+  @media (min-width: $breakpoints-4k-deskTop) {
+    @content;
+  }
+}
+
+@mixin more-deskTop {
+  @media (min-width: $breakpoints-more-deskTop) {
+    @content;
+  }
+}
 
 @mixin deskTop {
   @media (max-width: $breakpoints-deskTop) {

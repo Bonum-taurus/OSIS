@@ -10,7 +10,7 @@
     height: 100vh;
     width: 100vw;
 
-    background: linear-gradient(-2.41deg, rgb(222, 249, 255) -5.75%,rgba(241, 252, 255, 0) 69.47%,rgb(213, 242, 248) 112.044%);
+    background: $bg-color;
   }
 
   &__container {
@@ -21,6 +21,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include more-deskTop {
+      padding: 34px $padding-sides-page;
+    }
+
+    @include deskTop4k {
+      padding: 44px $padding-sides-page;
+    }
 
     @include pre-mobile {
       padding: 32px $padding-sides-page;
@@ -50,6 +58,16 @@
   &__logo-box {
     width: 80px;
     height: 22px;
+
+    @include more-deskTop {
+      width: 104px;
+      height: 28px;    
+    }
+
+    @include deskTop4k {
+      width: 126px;
+      height: 34px;
+    }
 
     @include mobile {
       width: 60px;
@@ -96,6 +114,10 @@
 
       transition: transform 1.5s;
 
+      &--main {
+        background-image: url(../../images/menu/burger-white.svg);
+      }
+
       &:hover {
         transform: rotate(360deg);
       }
@@ -110,7 +132,7 @@
         top: 32px;
         right: 32px;
 
-        background-image: url(../../images/menu/cross.svg);
+        background-image: url(../../images/menu/cross-white.svg);
 
         @include mobile {
           top: 32px;
@@ -156,6 +178,10 @@
     justify-content: center;
     align-items: center;
 
+    @include more-deskTop {
+      margin-left: 50px;
+    }
+
     @include lapTop {
       margin-left: 26px;
     }
@@ -181,7 +207,7 @@
         content: '';
         height: 1px;
         width: 100%;
-        background-color: $disabled-color;
+        background-color: $font-main-color;
 
         position: absolute;
         bottom: 0;
@@ -238,6 +264,18 @@
       color: $active-color;
     }
 
+    .header__menu-list--open &--active {
+      color: $footer-text-color;
+    }
+
+    @include more-deskTop {
+      font-size: 20px;
+    }
+
+    @include  deskTop4k {
+      font-size: 24px;
+    }
+
     @include tablet {
       line-height: 150%;
     }
@@ -265,6 +303,11 @@
 
   transition: all .5s linear;
 
+  @include more-deskTop {
+    width: max-content;
+    padding: 8px 18px;
+  }
+
   @include tablet {
     width: max-content;
     padding: 10px 16px;
@@ -279,6 +322,18 @@
     transform: translateX(20px);
 
     transition: all .5s;
+
+    @include more-deskTop {
+      font-size: 20px;
+
+      transform: translateX(25px);
+    }
+
+    @include deskTop4k {
+      font-size: 24px;
+
+      transform: translateX(30px);
+    }
 
     @include tablet {
       transform: translateX(0);
@@ -301,6 +356,20 @@
 
     transition: all .3s;
 
+    @include more-deskTop {
+      width: 50px;
+      height: 40px;
+    }
+
+    @include deskTop4k {
+      background-size: 30px;
+    }
+
+    @include deskTop4k {
+      width: 58px;
+      height: 46px;
+    }
+
     @include tablet {
       display: none;
     }
@@ -316,6 +385,11 @@
 
   &:hover &__name {
     transform: translateX(5px);
+
+    @include more-deskTop {
+      transform: translateX(0);
+      margin-right: 10px;
+    }
 
     @include tablet {
       transform: translateX(0);

@@ -22,6 +22,12 @@
       grid-row: 3 / 4;
     }
 
+    @include deskTop4k {
+      @include title(120px);
+
+      grid-column: 1 / 8;
+    }
+
     @include deskTop {
       @include title(80px);
     }
@@ -94,6 +100,10 @@
 
     margin-bottom: 100px;
 
+    @include deskTop4k {
+      margin-bottom: 160px;
+    }
+
     @include lapTop {
       grid-column: 5 / 13; 
     }
@@ -119,6 +129,12 @@
 
     margin-bottom: 40px;
 
+    @include deskTop4k {
+      margin-bottom: 70px;
+
+      grid-column: 5 / 12;
+    }
+
     @include tablet {
       grid-column: 4 / 13;
     }
@@ -138,6 +154,12 @@
     gap: 24px;
 
     margin-bottom: 100px;
+
+    @include deskTop4k {
+      justify-content: center;
+
+      margin-bottom: 140px;
+    }
 
     @include deskTop {
       gap: 16px;

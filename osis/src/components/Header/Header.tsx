@@ -5,11 +5,17 @@ import classNames from 'classnames';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import './Header.scss';
-import logo from '../../images/logo/OSIS-logo.svg';
+import logo_main from '../../images/logo/OSIS-logo-white-png.png';
+import logo_general from '../../images/logo/OSIS-logo-png.png';
+
 import { ButtonConsultation } from '../ButtonConsultation';
 
 const isActiveClass = ({ isActive }: { isActive: boolean }) => {
   return isActive ? "header__menu-link header__menu-link--active" : "header__menu-link";
+}
+
+const isActiveStyle = ({ isActive }: { isActive: boolean }) => {
+  return { color: isActive ? '#fff' : '' }
 }
 
 export const Header = () => {
@@ -66,7 +72,7 @@ export const Header = () => {
       })}>
         <div className="header__logo-box">
           <img
-            src={logo}
+            src={pathname === '/' || isOpenBurger ? logo_main : logo_general}
             alt="osis logo"
             className="header__logo-img"
           />
@@ -78,6 +84,7 @@ export const Header = () => {
           <button
             className={classNames('header__menu-burger', {
               'header__menu-burger--open': isOpenBurger,
+              'header__menu-burger--main': pathname === '/',
             })}
             onClick={() => handleClickBurger()}
           />
@@ -93,6 +100,7 @@ export const Header = () => {
               <NavLink
                 to="/"
                 className={isActiveClass}
+                style={isActiveStyle}
                 onClick={handleClickLink}
               >
                 Головна

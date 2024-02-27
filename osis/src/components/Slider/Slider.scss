@@ -13,6 +13,10 @@
   justify-content: center !important;
 
   gap: 16px !important;
+
+  @include deskTop4k {
+    gap: 32px !important;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -20,6 +24,11 @@
   height: 24px !important;
   background-color: $disabled-color !important;
   opacity: 1 !important;
+
+  @include deskTop4k {
+    width: 30px !important;
+    height: 30px !important;
+  }
 
   @include tablet {
     width: 16px !important;

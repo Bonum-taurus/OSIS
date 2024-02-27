@@ -1,6 +1,6 @@
 @import '../../utilities.scss';
 
-@mixin arrow-spinner-wrapper {
+@mixin arrow-wrapper {
   background-color: $active-color;
   border-radius: 100px;
   padding: 16px 24px;
@@ -8,6 +8,10 @@
   display: flex;
   justify-content: right;
   align-items: center;
+
+  @include deskTop4k {
+    padding: 20px 28px;
+  }
 
   @include tablet {
     padding: 8px 16px;
@@ -35,6 +39,12 @@
   transition: all .5s;
   animation-direction: alternate;
 
+  @include deskTop4k {
+    height: 90px;
+
+    padding: 10px 25px 10px 40px;
+  }
+
   @include tablet {
     height: 52px;
 
@@ -50,17 +60,37 @@
     transition: all .5s;
     transform: translateX(30px);
 
+    @include more-deskTop {
+      font-size: 20px;
+    }
+
+    @include deskTop4k {
+      font-size: 24px;
+    }
+
     @include tablet {
       line-height: normal;
     }
   }
 
   &__arrow {
-    @include arrow-spinner-wrapper;
+    @include arrow-wrapper;
 
     transition: all .5s;
 
     transform: scale(0);
+  }
+
+  &__arrow-icon {
+    @include more-deskTop {
+      width: 28px;
+      height: 28px;
+    }
+
+    @include deskTop4k {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &:hover &__name {
@@ -101,6 +131,10 @@
   &--submiting &__arrow-icon {
     animation: flyArrow linear 1s infinite;
 
+    @include more-deskTop {
+      animation: flyArrowForDeskTop4k linear 1s infinite;
+    }
+
     @include tablet {
       animation: flyArrowForTablet linear 1s infinite;
     }
@@ -110,6 +144,15 @@
 @keyframes flyArrow {
   0% {
     transform: translateX(-120%) scale(1);
+  }
+  100% {
+    transform: translateX(130%) scale(0.2);
+  }
+}
+
+@keyframes flyArrowForDeskTop4k {
+  0% {
+    transform: translateX(-100%) scale(1);
   }
   100% {
     transform: translateX(130%) scale(0.2);

@@ -24,6 +24,10 @@ $transition-open: all 0.8s;
 
     margin-bottom: $triger-margin-bottom;
 
+    @include deskTop4k {
+      margin-bottom: 50px;
+    }
+
     @include tablet {
       margin-bottom: 24px;
     }
@@ -39,6 +43,14 @@ $transition-open: all 0.8s;
     font-size: 24px;
     line-height: 150%;
 
+    @include more-deskTop {
+      font-size: 28px;
+    }
+
+    @include deskTop4k {
+      font-size: 32px;
+    }
+
     @include mobile {
       font-size: 18px;
     }
@@ -49,6 +61,18 @@ $transition-open: all 0.8s;
     height: 24px;
 
     background-image: url(../../images/directions/accordion/chevron-down.svg);
+
+    @include more-deskTop {
+      background-size: 100%;
+
+      width: 30px;
+      height: 30px;
+    }
+
+    @include deskTop4k {
+      width: 34px;
+      height: 34px;
+    }
   }
 
   &__inner-box {

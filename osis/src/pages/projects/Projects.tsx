@@ -9,6 +9,7 @@ import wave_right from '../../images/parallax/directions-wave-parallax.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Projects = () => {
+  const deskTop4k = useMediaQuery('(min-width:2000px)');
   const deskTop = useMediaQuery('(max-width:1279px)');
   const lapTop = useMediaQuery('(max-width:1024px)');
   const tablet = useMediaQuery('(max-width:744px)');
@@ -43,8 +44,8 @@ export const Projects = () => {
           className="projects__parallax-left"
           translateY={['-80%', '160%']}
           translateX={lapTop ? ['-38%', '-38%'] : deskTop ? ['-20%', '-20%'] : ['0', '0']}
-          scaleX={tablet ? [0.7, 0.7] : [1, 1]}
-          scaleY={tablet ? [0.7, 0.7] : [1, 1]}
+          scaleX={deskTop4k ? [1.3, 1.3] : tablet ? [0.7, 0.7] : [1, 1]}
+          scaleY={deskTop4k ? [1.3, 1.3] : tablet ? [0.7, 0.7] : [1, 1]}
         >
           <WaveParallax wave={wave_left} />
         </Parallax>
@@ -74,8 +75,8 @@ export const Projects = () => {
           className="projects__parallax-right"
           translateY={['0%', '-180%']}
           translateX={lapTop ? ['33%', '33%'] : deskTop ? ['10%', '10%'] : ['0', '0']}
-          scaleX={tablet ? [0.7, 0.7] : [1, 1]}
-          scaleY={tablet ? [0.7, 0.7] : [1, 1]}
+          scaleX={deskTop4k ? [1.3, 1.3] : tablet ? [0.7, 0.7] : [1, 1]}
+          scaleY={deskTop4k ? [1.3, 1.3] : tablet ? [0.7, 0.7] : [1, 1]}
         >
           <WaveParallax wave={wave_right} />
         </Parallax>

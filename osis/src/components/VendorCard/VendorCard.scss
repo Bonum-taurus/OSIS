@@ -32,6 +32,16 @@ $vendors:
     font-family: $title-font;
   }
 
+  @include more-deskTop {
+    flex: 1 0 23%;
+    max-width: 23%;
+    min-height: 180px;
+  }
+
+  @include deskTop4k {
+    flex: 1 0 18%;
+  }
+
   @include deskTop {
     flex: 1 0 23%;
     min-height: 180px;

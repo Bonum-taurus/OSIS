@@ -8,6 +8,7 @@ import wave from '../../images/parallax/main-wave-parallax.png';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Contacts = () => {
+  const deskTop4k = useMediaQuery('(min-width:2000px)');
   const lapTop = useMediaQuery('(max-width:1024px)');
   const tablet = useMediaQuery('(max-width:744px)');
   const pre_mobile = useMediaQuery('(max-width:625px)');
@@ -91,10 +92,10 @@ export const Contacts = () => {
         <div className="contacts__parallax-box">
           <Parallax 
             className="contacts__parallax" 
-            translateX={lapTop ? ['-48%', '-48%'] : ['-38%', '-38%']}
+            translateX={deskTop4k ? ['-28%', '-28%'] : lapTop ? ['-48%', '-48%'] : ['-38%', '-38%']}
             translateY={mobile ? ['-88%', '85%'] : tablet ? ['-68%', '55%'] : ['-38%', '25%']}
-            scaleX={mobile ? [0.6, 0.6] : pre_mobile ? [0.7, 0.7] : lapTop ? [0.9, 0.9] : [1, 1]}
-            scaleY={mobile ? [0.6, 0.6] : pre_mobile ? [0.8, 0.8] : [1, 1]}
+            scaleX={deskTop4k ? [1.3, 1.3] : mobile ? [0.6, 0.6] : pre_mobile ? [0.7, 0.7] : lapTop ? [0.9, 0.9] : [1, 1]}
+            scaleY={deskTop4k ? [1.3, 1.3] : mobile ? [0.6, 0.6] : pre_mobile ? [0.8, 0.8] : [1, 1]}
           >
             <WaveParallax wave={wave} />
           </Parallax>
