@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/OSIS/static/css/main.6d86d7b5.css",
-    "main.js": "/OSIS/static/js/main.846b9a9b.js",
+    "main.css": "/OSIS/static/css/main.fe494801.css",
+    "main.js": "/OSIS/static/js/main.4340cdc9.js",
     "static/media/waves-hover.png": "/OSIS/static/media/waves-hover.031a6c396b135a6f7c7b.png",
     "static/media/waves.png": "/OSIS/static/media/waves.69a04e3a7d0211fb3443.png",
     "static/media/directions-wave-parallax.png": "/OSIS/static/media/directions-wave-parallax.35978786fa738d2ea9fa.png",
@@ -68,11 +68,11 @@
     "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b5974efaefa9b.svg",
     "static/media/chevron-down.svg": "/OSIS/static/media/chevron-down.c343d1a39a5b3946309e.svg",
     "static/media/chevron-up.svg": "/OSIS/static/media/chevron-up.5b19f08e2afb92d90b69.svg",
-    "main.6d86d7b5.css.map": "/OSIS/static/css/main.6d86d7b5.css.map",
-    "main.846b9a9b.js.map": "/OSIS/static/js/main.846b9a9b.js.map"
+    "main.fe494801.css.map": "/OSIS/static/css/main.fe494801.css.map",
+    "main.4340cdc9.js.map": "/OSIS/static/js/main.4340cdc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d86d7b5.css",
-    "static/js/main.846b9a9b.js"
+    "static/css/main.fe494801.css",
+    "static/js/main.4340cdc9.js"
   ]
 }
