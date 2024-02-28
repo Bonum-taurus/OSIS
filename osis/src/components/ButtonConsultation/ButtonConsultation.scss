@@ -139,6 +139,22 @@
       animation: flyArrowForTablet linear 1s infinite;
     }
   }
+
+  &--in-menu {
+    background-color: $active-color;
+  }
+
+  &--in-menu &__name {
+    color: $font-main-color;
+  }
+
+  &--in-menu &__arrow {
+    background-color: $button-color;
+  }
+
+  &--in-menu:hover &__name {
+    color: $button-color;
+  }
 }
 
 @keyframes flyArrow {

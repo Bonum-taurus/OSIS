@@ -147,11 +147,14 @@ export const Header = () => {
               {isOpenBurger && pathname !== '/contacts' ? (
                 <ButtonConsultation 
                   setIsOpenBurger={setIsOpenBurger}
-                  setIsBodyHidden={setIsBodyHidden} 
+                  setIsBodyHidden={setIsBodyHidden}
+                  isOpenBurger={isOpenBurger}
                 />
               ) : (
                 <button
-                  className="header__button button button--open-menu"
+                  className={classNames("header__button button button--open-menu", {
+                    'button--on-main': pathname === '/',
+                  })}
                   onClick={() => navigate('contacts')}
                   disabled={pathname === '/contacts' ? true : false}
                 >

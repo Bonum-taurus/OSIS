@@ -12,10 +12,10 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <ParallaxProvider>
-    <Router>
-      <React.StrictMode>
+    <React.StrictMode>
+      <Router>
         <Root /> 
-      </React.StrictMode>
-    </Router>
+      </Router>
+    </React.StrictMode>
   </ParallaxProvider>
 );

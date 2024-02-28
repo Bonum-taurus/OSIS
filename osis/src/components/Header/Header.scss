@@ -303,6 +303,22 @@
 
   transition: all .5s linear;
 
+  &--on-main {
+    background-color: $active-color;
+  }
+
+  &--on-main &__name {
+    color: $font-main-color;
+  }
+
+  &--on-main:hover &__name {
+    color: $button-color;
+  }
+
+  &--on-main &__arrow  {
+    background-color: $button-color;
+  }
+
   @include more-deskTop {
     width: max-content;
     padding: 8px 18px;

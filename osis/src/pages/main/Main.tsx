@@ -15,7 +15,7 @@ export const Main = () => {
   const lapTop = useMediaQuery('(max-width:1024px)');
   const tablet = useMediaQuery('(max-width:744px)');
   const mobile = useMediaQuery('(max-width:500px)');
-
+  
   return (
     <div className="main">
       <section className="main__top">

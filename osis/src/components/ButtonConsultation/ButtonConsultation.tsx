@@ -12,6 +12,7 @@ type Props = {
   notSuccess?: string,
   setIsOpenBurger?: (burger: boolean) => void;
   setIsBodyHidden?: (hidden: boolean) => void;
+  isOpenBurger?: boolean;
 }
 
 export const ButtonConsultation: React.FC<Props> = ({ 
@@ -22,6 +23,7 @@ export const ButtonConsultation: React.FC<Props> = ({
   notSuccess,
   setIsOpenBurger,
   setIsBodyHidden,
+  isOpenBurger,
 }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
@@ -46,6 +48,7 @@ export const ButtonConsultation: React.FC<Props> = ({
       className={classNames('button-consultation', {
         'button-consultation--disable': errorName || errorPhone,
         'button-consultation--submiting': isSubmiting,
+        'button-consultation--in-menu': isOpenBurger,
       })}
       style={
         pathname === '/contacts' ?
