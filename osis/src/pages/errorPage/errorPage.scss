@@ -51,7 +51,7 @@
   }
 
   &__button {
-    background-color: $active-color;
+    background-color: $bg-color;
     padding: 16px 24px;
 
     border-radius: 100px;
@@ -70,16 +70,14 @@
   }
 
   &__button-text {
-    color: $button-color;
-
-    text-transform: uppercase;
+    color: #fff;
 
     font-weight: 600;
 
+    font-family: 'Work Sans', sans-serif;
+
     @include more-deskTop {
       font-size: 20px;
-
-      text-transform: none;
     }
 
     @include deskTop4k {
