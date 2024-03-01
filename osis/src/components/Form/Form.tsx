@@ -5,6 +5,8 @@ import './Form.scss';
 
 import axios from 'axios';
 
+import { BASE_URL } from '../../services/api_URL';
+
 export const Form = () => {
   const [name, setName] = useState<string>('');
   const [phone, setPhone] = useState<string>('+380'); 
@@ -133,7 +135,7 @@ export const Form = () => {
     setSubmiting(true);
     setNotSuccess('');
 
-    axios.post('https://osis-server.onrender.com/api/cooperation/', 
+    axios.post(`${BASE_URL}/api/cooperation/`, 
       {
         name: name,
         phone_number: phone,
