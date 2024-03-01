@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/OSIS/static/css/main.36334e3b.css",
+    "main.css": "/OSIS/static/css/main.2ee88606.css",
     "main.js": "/OSIS/static/js/main.5cec6b48.js",
     "static/css/374.010d3327.chunk.css": "/OSIS/static/css/374.010d3327.chunk.css",
     "static/js/374.dce8c959.chunk.js": "/OSIS/static/js/374.dce8c959.chunk.js",
@@ -74,7 +74,7 @@
     "static/media/arrow-nav.svg": "/OSIS/static/media/arrow-nav.11656be7990b53c9a43b5974efaefa9b.svg",
     "static/media/chevron-down.svg": "/OSIS/static/media/chevron-down.c343d1a39a5b3946309e.svg",
     "static/media/chevron-up.svg": "/OSIS/static/media/chevron-up.5b19f08e2afb92d90b69.svg",
-    "main.36334e3b.css.map": "/OSIS/static/css/main.36334e3b.css.map",
+    "main.2ee88606.css.map": "/OSIS/static/css/main.2ee88606.css.map",
     "main.5cec6b48.js.map": "/OSIS/static/js/main.5cec6b48.js.map",
     "374.010d3327.chunk.css.map": "/OSIS/static/css/374.010d3327.chunk.css.map",
     "374.dce8c959.chunk.js.map": "/OSIS/static/js/374.dce8c959.chunk.js.map",
@@ -84,7 +84,7 @@
     "195.4f63e124.chunk.js.map": "/OSIS/static/js/195.4f63e124.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.36334e3b.css",
+    "static/css/main.2ee88606.css",
     "static/js/main.5cec6b48.js"
   ]
 }
