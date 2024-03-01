@@ -7,7 +7,7 @@ import wave from '../../images/parallax/main-wave-parallax.png';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const Contacts = () => {
+const Contacts = () => {
   const deskTop4k = useMediaQuery('(min-width:2000px)');
   const lapTop = useMediaQuery('(max-width:1024px)');
   const tablet = useMediaQuery('(max-width:744px)');
@@ -124,3 +124,5 @@ export const Contacts = () => {
     </>
   )
 }
+
+export default Contacts;

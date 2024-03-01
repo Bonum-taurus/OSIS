@@ -1,0 +1,93 @@
+@import '../../utilities.scss';
+
+.error {
+  padding-top: $padding-top-page;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    @include title(40px);
+    text-align: center;
+
+    margin-bottom: 24px;
+
+    @include more-deskTop {
+      @include title(50px);
+    }
+
+    @include deskTop4k {
+      @include title(60px);
+
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      @include title(32px);
+    }
+
+    @media (max-width: 400px) {
+      @include title(28px);
+    }
+  }
+
+  &__text {
+    @include text;
+    text-align: center;
+
+    margin-bottom: 24px;
+
+    @include more-deskTop {
+      font-size: 20px;
+
+      margin-bottom: 40px;
+    }
+
+    @include deskTop4k {
+      font-size: 24px;
+    }
+  }
+
+  &__button {
+    background-color: $active-color;
+    padding: 16px 24px;
+
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    margin-bottom: 34px;
+
+    @include more-deskTop {
+      padding: 18px 28px;
+    }
+
+    @include mobile {
+      padding: 12px 20px;
+    }
+  }
+
+  &__button-text {
+    color: $button-color;
+
+    text-transform: uppercase;
+
+    font-weight: 600;
+
+    @include more-deskTop {
+      font-size: 20px;
+
+      text-transform: none;
+    }
+
+    @include deskTop4k {
+      font-size: 24px;
+    }
+
+    @include mobile {
+      text-transform: none;
+    }
+  }
+}

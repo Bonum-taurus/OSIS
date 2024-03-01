@@ -8,7 +8,7 @@ import wave_right from '../../images/parallax/directions-wave-parallax.png';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-export const Projects = () => {
+const Projects = () => {
   const deskTop4k = useMediaQuery('(min-width:2000px)');
   const deskTop = useMediaQuery('(max-width:1279px)');
   const lapTop = useMediaQuery('(max-width:1024px)');
@@ -131,3 +131,5 @@ export const Projects = () => {
     </section>
   )
 }
+
+export default Projects;
