@@ -6,6 +6,14 @@
 - Sass (SCSS)
 - BEM
 - JavaScript
+- TypeScript
+- React
+- React-router-dom
+- Classnames
+- React-scroll-parallax
+- Swiper
+- Axios
+
 
 # Project Setup
 - install node 14+
